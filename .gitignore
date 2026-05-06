@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local notes / secrets
+*.env
+*.key
+*.keystore
+*.jks
+
+sonixy-release.jks
+# Keep release APKs tracked in this repo
+!releases/*.apk
+
