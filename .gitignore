@@ -10,7 +10,6 @@ Thumbs.db
 *.keystore
 *.jks
 
-sonixy-release.jks
 # Keep release APKs tracked in this repo
 !releases/*.apk
 
