@@ -25,6 +25,7 @@ https://github.com/nourddinak/sonixy/releases/latest
 - Background downloads using Android foreground services.
 - Built-in local music player with notification and lock-screen controls.
 - Library folders, favorites, folder search, selection, move, and delete tools.
+- No Lyrics folder and folder-level lyrics search for missing lyric sidecars.
 - In-app update checks from GitHub Releases.
 - Update download progress and installer launch from Settings.
 
@@ -52,13 +53,13 @@ Sonixy can check GitHub Releases for a newer APK.
 Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.1-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2-release-signed.apk
 ```
 
 Expected SHA-256:
 
 ```text
-B3E9DDB1231015DA9F8B5009277E4DD641A283B668A339D9BF02AD8B2078D6A9
+0100C3F212CFEB18EC1856C51A1ACEA6095129FA4319DD6101F36D4DF790B54B
 ```
 
 ## Android Support
