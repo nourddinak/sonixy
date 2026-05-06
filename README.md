@@ -1,52 +1,81 @@
 # Sonixy
 
-Sonixy is an Android music utility built for saving and managing music from Spotify links. It resolves Spotify metadata, finds matching audio through a YouTube-based engine, saves tracks locally, and provides an in-app playback experience.
+Sonixy is an Android music app for downloading, saving, organizing, and playing music from Spotify links.
 
-This repository is used for public release information and downloadable APK builds. The application source code remains private.
+This folder contains the public release files for Sonixy, including signed APK builds, release notes, and checksums.
 
-## Highlights
+## Latest Release
 
-- Open Spotify track, album, playlist, and artist links
-- Resolve song metadata including title, artist, album, and artwork
-- Download audio using a `yt-dlp` powered resolving pipeline
-- Save music locally with metadata and cover art
-- Fetch synced or plain lyrics when available
-- Continue downloads in the background with Android foreground services
-- Play downloaded music inside Sonixy
-- Modern Android interface designed for mobile use
+[![Latest Release](https://img.shields.io/github/v/release/nourddinak/sonixy?label=Latest%20Release&style=for-the-badge)](https://github.com/nourddinak/sonixy/releases/latest)
+[![Latest Downloads](https://img.shields.io/github/downloads/nourddinak/sonixy/latest/total?label=Latest%20Downloads&style=for-the-badge)](https://github.com/nourddinak/sonixy/releases/latest)
+[![All Releases](https://img.shields.io/badge/View-All%20Releases-181717?style=for-the-badge&logo=github)](https://github.com/nourddinak/sonixy/releases)
 
-## Installation
-
-1. Download `sonixy-xxxx-release-signed.apk` from the `releases` folder or from GitHub Releases.
-2. Transfer the APK to your Android device if you downloaded it on a computer.
-3. Open the APK on your device.
-4. If Android asks, allow installation from your browser or file manager.
-5. Complete the installation and open Sonixy.
-
-## Verify the APK
-
-To confirm the APK matches the published release, compare its SHA-256 checksum with the value below:
+Download the newest APK from:
 
 ```text
-B973FBF07AD4EC28B54B396F2EDD44D81E676FF4C3FE7EABFD0164C99C46CA7E
+https://github.com/nourddinak/sonixy/releases/latest
 ```
 
-On Windows PowerShell:
+## Features
+
+- Spotify track, album, playlist, and artist link support.
+- Local audio downloads powered by a `yt-dlp` based resolver.
+- Metadata cleanup for title, artist, album, and cover art.
+- Synced and plain lyrics support when available.
+- Background downloads using Android foreground services.
+- Built-in local music player with notification and lock-screen controls.
+- Library folders, favorites, folder search, selection, move, and delete tools.
+- In-app update checks from GitHub Releases.
+- Update download progress and installer launch from Settings.
+
+## Install
+
+1. Open the latest GitHub release.
+2. Download the signed APK asset.
+3. Open the APK on your Android device.
+4. Allow installs from your browser or file manager if Android asks.
+5. Finish installation and open Sonixy.
+
+Android only allows updating when the new APK has a higher `versionCode` and uses the same signing key.
+
+## In-App Updates
+
+Sonixy can check GitHub Releases for a newer APK.
+
+- If a new version is available, Sonixy can show a launch popup.
+- `Download` opens Settings and starts the update download there.
+- `Later` closes the popup and can show it again next launch.
+- `Don't show again` ignores only that version until a newer release is published.
+
+## Verify APK
+
+Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.0-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.1-release-signed.apk
+```
+
+Expected SHA-256:
+
+```text
+B3E9DDB1231015DA9F8B5009277E4DD641A283B668A339D9BF02AD8B2078D6A9
 ```
 
 ## Android Support
 
 - Minimum Android version: Android 7.0, API 24
 - Target Android version: Android 14, API 34
-- Supported CPU architecture: `arm64-v8a`
+- Supported ABIs: `arm64-v8a`, `x86_64`
 
-## Repository Status
+`arm64-v8a` supports modern Android phones. `x86_64` supports modern Android emulators.
 
-This is a closed-source release repository. Source code, internal build files, signing keys, and private assets are not included.
+## Release History
+
+See [`RELEASES.md`](RELEASES.md) for all versions, release notes, APK filenames, and checksums.
 
 ## License
 
 See [`LICENSE`](LICENSE).
+
+---
+*Created with ❤️ by the nourddinak.*
