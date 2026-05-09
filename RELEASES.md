@@ -1,5 +1,24 @@
 # Sonixy Releases
 
+## v1.2.1
+
+- File: `releases/sonixy-v1.2.1-release-signed.apk`
+- Version name: `1.2.1`
+- Version code: `4`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `F4981246879C4FF4027F055F2EC4467D990507C59B27AC226749B5B680F6A384`
+
+### Release Notes
+
+Sonixy v1.2.1 focuses on a dedicated, distraction-free Offline Mode experience with refined navigation and a floating mini-player, alongside smoother app loads and new features.
+
+- Added the Reels tab to deliver an immersive and interactive music shorts feed.
+- Optimized app launching and transition mechanics to make app loads significantly smoother.
+- Refactored Offline Mode to keep only the Library page, removing other tabs when offline.
+- Completely hid the bottom navigation bar when in Offline Mode for a cleaner experience.
+- Repositioned the bottom mini-player (expanded and collapsed modes) to float elegantly at the bottom nav area when offline.
+- Updated the back button handler to correctly warn and exit the app from the Library page when offline, instead of forcing navigation to the hidden Home page.
+
 ## v1.2
 
 - File: `releases/sonixy-v1.2-release-signed.apk`

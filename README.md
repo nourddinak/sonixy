@@ -53,13 +53,13 @@ Sonixy can check GitHub Releases for a newer APK.
 Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.1-release-signed.apk
 ```
 
 Expected SHA-256:
 
 ```text
-0100C3F212CFEB18EC1856C51A1ACEA6095129FA4319DD6101F36D4DF790B54B
+F4981246879C4FF4027F055F2EC4467D990507C59B27AC226749B5B680F6A384
 ```
 
 ## Android Support
