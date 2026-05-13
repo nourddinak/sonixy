@@ -1,5 +1,28 @@
 # Sonixy Releases
 
+## v1.2.2
+
+- File: `releases/sonixy-v1.2.2-release-signed.apk`
+- Version name: `1.2.2`
+- Version code: `5`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `8853818C20266B32FA210E7392295E1C9647E0FCD4643A638A0C6B2A5BDBF7DD`
+
+### Release Notes
+
+Sonixy v1.2.2 is a visual polish release for the player, library, onboarding, and responsive layouts.
+
+- Added first-install and update onboarding screens that introduce Sonixy and highlight what changed after updates.
+- Redesigned the full now-playing overlay with a larger animated cover, smooth wavy progress ring, cleaner controls, and a logo-style scrubber thumb.
+- Added a compact Next Song panel with artist artwork, multi-artist support, and a clearer bottom placement.
+- Added current-song artist visuals under the title so featured artists feel connected to the playing track.
+- Redesigned the volume and sleep timer overlays with theme-aware colors and cleaner icon-led controls.
+- Added Favorite Artists support, including a picker page where users can select artists and pin them at the top of the Artists page.
+- Improved library, folder, and artist pages with cleaner outlines, smoother search styling, better spacing, full-width banner artwork, and softer image-to-list fades.
+- Improved artist image quality and fixed header icon placement on the Artists page.
+- Fixed responsive sizing issues across small and large phones, including search text visibility and player spacing.
+- Fixed the Downloader page light theme so the Download action remains visible in white mode.
+
 ## v1.2.1
 
 - File: `releases/sonixy-v1.2.1-release-signed.apk`

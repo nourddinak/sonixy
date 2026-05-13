@@ -16,6 +16,12 @@ Download the newest APK from:
 https://github.com/nourddinak/sonixy/releases/latest
 ```
 
+Current packaged release in this folder:
+
+```text
+releases/sonixy-v1.2.2-release-signed.apk
+```
+
 ## Features
 
 - Spotify track, album, playlist, and artist link support.
@@ -28,6 +34,11 @@ https://github.com/nourddinak/sonixy/releases/latest
 - No Lyrics folder and folder-level lyrics search for missing lyric sidecars.
 - In-app update checks from GitHub Releases.
 - Update download progress and installer launch from Settings.
+- First-install and update onboarding pages.
+- Redesigned now-playing overlay with animated cover art, wavy progress, bottom controls, and next-song previews.
+- Favorite Artists picker and pinned favorite artist row.
+- Theme-aware sleep timer and volume overlays.
+- Responsive light and dark UI polish across Downloader, Library, Artists, folders, and player screens.
 
 ## Install
 
@@ -53,13 +64,13 @@ Sonixy can check GitHub Releases for a newer APK.
 Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.1-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.2-release-signed.apk
 ```
 
 Expected SHA-256:
 
 ```text
-F4981246879C4FF4027F055F2EC4467D990507C59B27AC226749B5B680F6A384
+8853818C20266B32FA210E7392295E1C9647E0FCD4643A638A0C6B2A5BDBF7DD
 ```
 
 ## Android Support

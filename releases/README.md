@@ -4,12 +4,21 @@ This folder contains downloadable Sonixy APK releases.
 
 ## Files
 
+- `sonixy-v1.2.2-release-signed.apk`
 - `sonixy-v1.2.1-release-signed.apk`
 - `sonixy-v1.2-release-signed.apk`
 - `sonixy-v1.1-release-signed.apk`
 - `sonixy-v1.0-release-signed.apk`
 
 ## Checksums
+
+### sonixy-v1.2.2-release-signed.apk
+
+SHA-256:
+
+```text
+8853818C20266B32FA210E7392295E1C9647E0FCD4643A638A0C6B2A5BDBF7DD
+```
 
 ### sonixy-v1.2.1-release-signed.apk
 
