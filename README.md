@@ -19,7 +19,7 @@ https://github.com/nourddinak/sonixy/releases/latest
 Current packaged release in this folder:
 
 ```text
-releases/sonixy-v1.2.2-release-signed.apk
+releases/sonixy-v1.2.3-release-signed.apk
 ```
 
 ## Features
@@ -39,6 +39,9 @@ releases/sonixy-v1.2.2-release-signed.apk
 - Favorite Artists picker and pinned favorite artist row.
 - Theme-aware sleep timer and volume overlays.
 - Responsive light and dark UI polish across Downloader, Library, Artists, folders, and player screens.
+- Zero-lag decoupled home feed architecture with 60fps scrolling.
+- Global region and category filtering chips for trending discovery.
+- Premium glassmorphic redesign of track cards and onboarding screens.
 
 ## Install
 
@@ -64,13 +67,13 @@ Sonixy can check GitHub Releases for a newer APK.
 Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.2-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.3-release-signed.apk
 ```
 
 Expected SHA-256:
 
 ```text
-8853818C20266B32FA210E7392295E1C9647E0FCD4643A638A0C6B2A5BDBF7DD
+8DCE6594B32081D5E64916706227862676935F3B6908F493EF8EE8551C411C9B
 ```
 
 ## Android Support

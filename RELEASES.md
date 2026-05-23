@@ -1,5 +1,24 @@
 # Sonixy Releases
 
+## v1.2.3
+
+- File: `releases/sonixy-v1.2.3-release-signed.apk`
+- Version name: `1.2.3`
+- Version code: `6`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `8DCE6594B32081D5E64916706227862676935F3B6908F493EF8EE8551C411C9B`
+
+### Release Notes
+
+Sonixy v1.2.3 brings a major overhaul to the Discover Home tab and Onboarding experience, prioritizing ultra-smooth 60fps performance and premium aesthetics.
+
+- Completely rebuilt the Home screen with a new decoupled layout architecture to guarantee zero-lag scrolling and eliminate startup lag.
+- Added Global Region filters (Country and Category chips) to the top of the Home feed to instantly discover trending tracks globally.
+- Redesigned the main track card into a premium glassmorphic `PremiumTrackCard` with micro-animations.
+- Upgraded the Onboarding flow with dynamic content, fluid "breathing" background art, and newly designed premium mock track cards.
+- Restyled the `PreviewMiniPlayer` to flawlessly integrate above the global navigation bar.
+- Removed all implicit layout nesting bugs that previously caused dropped frames during complex layout evaluations.
+
 ## v1.2.2
 
 - File: `releases/sonixy-v1.2.2-release-signed.apk`
