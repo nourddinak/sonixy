@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonixy | Your Music, Everywhere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --subtext: #888888;
+            --accent: #fff;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.05);
+            --btn-hover: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG Mesh Gradient Background */
+        .bg-mesh {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+            opacity: 0.6;
+            background-image: 
+                radial-gradient(at 40% 20%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+            animation: breathe 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes breathe {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--subtext);
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+            line-height: 1.5;
+        }
+
+        .downloads {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .dl-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 340px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dl-card:hover {
+            transform: translateY(-8px);
+            background: var(--btn-hover);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Subtle glowing edge effect on hover */
+        .dl-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .dl-card:hover::before { opacity: 1; }
+
+        .dl-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .dl-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .dl-card p {
+            color: var(--subtext);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .btn-label {
+            background: #ffffff;
+            color: #000000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 1rem;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .dl-card:hover .btn-label {
+            transform: scale(1.05);
+        }
+        
+        .version-tag {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+            color: #ccc;
+            font-family: monospace;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .dl-card.loaded .version-tag {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-mesh"></div>
+
+    <div class="container">
+        <div class="logo">Sonixy</div>
+        
+        <h1>Listen<br>Without Limits.</h1>
+        <p class="subtitle">Download, organize, and play your music seamlessly across Android and Windows.</p>
+
+        <div class="downloads">
+            <!-- Windows Download -->
+            <a href="https://github.com/nourddinak/sonixy/releases/latest" id="win-link" class="dl-card">
+                <span class="version-tag" id="win-version">v...</span>
+                <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/>
+                </svg>
+                <h3>Windows</h3>
+                <p>Immersive desktop player with local network casting and auto-updates.</p>
+                <div class="btn-label" id="win-btn-text">Fetching latest...</div>
+            </a>
+
+            <!-- Android Download -->
+            <a href="https://github.com/nourddinak/sonixy/releases/latest" id="and-link" class="dl-card">
+                <span class="version-tag" id="and-version">v...</span>
+                <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.022 3.503c-1.4362-.6481-3.1399-1.0259-4.9922-1.0259-1.8527 0-3.5564.3778-4.9926 1.0259l-2.022-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.695 11.4552.2612 15.6542.115 20.6725h23.77c-.1462-5.0183-2.58-9.2173-6.0025-11.3511"/>
+                </svg>
+                <h3>Android</h3>
+                <p>The ultimate mobile experience with zero-lag scrolling and offline lyrics.</p>
+                <div class="btn-label" id="and-btn-text">Fetching latest...</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        async function fetchLatestRelease() {
+            try {
+                // Fetch actual latest release data from GitHub API
+                const res = await fetch('https://api.github.com/repos/nourddinak/sonixy/releases/latest');
+                if (!res.ok) throw new Error('Failed to fetch release');
+                const data = await res.json();
+                const version = data.tag_name || data.name;
+
+                // Find APK and EXE direct download assets
+                const apkAsset = data.assets.find(a => a.name.endsWith('.apk'));
+                const exeAsset = data.assets.find(a => a.name.endsWith('.exe'));
+
+                // Update Windows Card to instantly download the .exe
+                if (exeAsset) {
+                    const winLink = document.getElementById('win-link');
+                    winLink.href = exeAsset.browser_download_url;
+                    winLink.classList.add('loaded');
+                    document.getElementById('win-version').textContent = version;
+                    document.getElementById('win-btn-text').textContent = 'Download .exe';
+                }
+
+                // Update Android Card to instantly download the .apk
+                if (apkAsset) {
+                    const andLink = document.getElementById('and-link');
+                    andLink.href = apkAsset.browser_download_url;
+                    andLink.classList.add('loaded');
+                    document.getElementById('and-version').textContent = version;
+                    document.getElementById('and-btn-text').textContent = 'Download .apk';
+                }
+
+            } catch (err) {
+                console.error("Falling back to manual release page link:", err);
+                // Fallback text if they get rate limited
+                document.getElementById('win-btn-text').textContent = 'Check Latest on GitHub';
+                document.getElementById('and-btn-text').textContent = 'Check Latest on GitHub';
+            }
+        }
+
+        fetchLatestRelease();
+    </script>
+</body>
+</html>

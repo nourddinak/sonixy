@@ -8,6 +8,10 @@
 - Application ID: `com.nourddinak.sonixy`
 - SHA-256: `8DCE6594B32081D5E64916706227862676935F3B6908F493EF8EE8551C411C9B`
 
+**Desktop**
+- File: `releases/desktop/Sonixy Desktop Setup 1.2.3.exe`
+- Auto-Updater: `releases/desktop/latest.yml`
+
 ### Release Notes
 
 Sonixy v1.2.3 brings a major overhaul to the Discover Home tab and Onboarding experience, prioritizing ultra-smooth 60fps performance and premium aesthetics.

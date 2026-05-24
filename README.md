@@ -1,8 +1,8 @@
 # Sonixy
 
-Sonixy is an Android music app for downloading, saving, organizing, and playing music from Spotify links.
+Sonixy is a music ecosystem featuring an Android app and a companion Desktop App for downloading, saving, organizing, and playing music from Spotify links.
 
-This folder contains the public release files for Sonixy, including signed APK builds, release notes, and checksums.
+This folder contains the public release files for Sonixy, including signed APK builds, Desktop Setup executables, release notes, and checksums.
 
 ## Latest Release
 
@@ -16,10 +16,12 @@ Download the newest APK from:
 https://github.com/nourddinak/sonixy/releases/latest
 ```
 
-Current packaged release in this folder:
+Current packaged releases in this folder:
 
 ```text
 releases/sonixy-v1.2.3-release-signed.apk
+releases/desktop/Sonixy Desktop Setup 1.2.3.exe
+releases/desktop/latest.yml
 ```
 
 ## Features
@@ -43,7 +45,13 @@ releases/sonixy-v1.2.3-release-signed.apk
 - Global region and category filtering chips for trending discovery.
 - Premium glassmorphic redesign of track cards and onboarding screens.
 
-## Install
+### Desktop App Features
+- Immersive ambient player with synced lyrics and dynamic background glow.
+- Local network discovery (mDNS/Bonjour) to automatically find and cast music from your phone.
+- Cross-device playback control and synced states between Phone and PC.
+- Built-in background Auto-Updater from GitHub Releases.
+
+## Install (Mobile)
 
 1. Open the latest GitHub release.
 2. Download the signed APK asset.
@@ -52,6 +60,13 @@ releases/sonixy-v1.2.3-release-signed.apk
 5. Finish installation and open Sonixy.
 
 Android only allows updating when the new APK has a higher `versionCode` and uses the same signing key.
+
+## Install (Desktop)
+
+1. Open the latest GitHub release.
+2. Download `Sonixy Desktop Setup 1.2.3.exe`.
+3. Run the installer. It will install the app and automatically create a desktop shortcut.
+4. The desktop app will automatically update itself in the background when newer releases are published to GitHub!
 
 ## In-App Updates
 
