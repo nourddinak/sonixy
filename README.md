@@ -19,7 +19,7 @@ https://github.com/nourddinak/sonixy/releases/latest
 Current packaged releases in this folder:
 
 ```text
-releases/sonixy-v1.2.3-release-signed.apk
+releases/sonixy-v1.2.4-release-signed.apk
 releases/desktop/Sonixy Desktop Setup 1.2.3.exe
 releases/desktop/latest.yml
 ```
@@ -82,13 +82,13 @@ Sonixy can check GitHub Releases for a newer APK.
 Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.3-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.4-release-signed.apk
 ```
 
 Expected SHA-256:
 
 ```text
-8DCE6594B32081D5E64916706227862676935F3B6908F493EF8EE8551C411C9B
+16E0730643B1342773995E05FBED94C2FF4F0B6A0FF4595FC287DBCDE61FE955
 ```
 
 ## Android Support

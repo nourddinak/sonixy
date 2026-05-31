@@ -1,5 +1,17 @@
 # Sonixy Releases
 
+## v1.2.4
+
+- File: `releases/sonixy-v1.2.4-release-signed.apk`
+- Version name: `1.2.4`
+- Version code: `7`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `16E0730643B1342773995E05FBED94C2FF4F0B6A0FF4595FC287DBCDE61FE955`
+
+### Release Notes
+
+Sonixy v1.2.4 contains minor updates and bug fixes.
+
 ## v1.2.3
 
 - File: `releases/sonixy-v1.2.3-release-signed.apk`

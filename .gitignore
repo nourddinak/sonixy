@@ -10,6 +10,5 @@ Thumbs.db
 *.keystore
 *.jks
 
-# Keep release APKs tracked in this repo
-!releases/*.apk
-
+# Ignore APK files
+*.apk
