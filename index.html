@@ -1,268 +1,1082 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonixy | Your Music, Everywhere</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Sonixy | High-Speed Spotify Music Downloader & Player for Android and Windows</title>
+    <meta name="title" content="Sonixy | High-Speed Spotify Music Downloader & Player for Android and Windows">
+    <meta name="description" content="Download Spotify tracks, playlists, and albums with synced timecoded lyrics. Enjoy zero-lag 60fps playback on Android and ambient desktop casting on Windows. 100% Free & Open Source.">
+    <meta name="keywords" content="Spotify music downloader, spotify to mp3, android music player, synced lyrics, lrc player, electron music player, sonixy, offline music player, high quality audio downloader">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="nourddinak">
+    <meta name="theme-color" content="#08080a">
+    <link rel="canonical" href="https://nourddinak.github.io/sonixy/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nourddinak.github.io/sonixy/">
+    <meta property="og:site_name" content="Sonixy Music">
+    <meta property="og:title" content="Sonixy | Your Music, Downloaded & Synced Everywhere">
+    <meta property="og:description" content="The ultimate free music ecosystem: High-speed Spotify downloader, timecoded synced lyrics, 60fps mobile player, and ambient Windows desktop companion.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/sonixy-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nourddinak.github.io/sonixy/">
+    <meta name="twitter:title" content="Sonixy | High-Speed Spotify Music Downloader & Player">
+    <meta name="twitter:description" content="Download Spotify tracks, playlists & albums with real-time synced lyrics on Android & Windows. Zero ads, completely free & open source.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/sonixy-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+
+    <!-- Google Search Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sonixy",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Android, Windows 10, Windows 11",
+      "description": "Sonixy is a high-performance music downloader and ambient playback ecosystem for Android and Windows with synced timecoded lyrics.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "nourddinak",
+        "url": "https://github.com/nourddinak"
+      },
+      "downloadUrl": "https://github.com/nourddinak/sonixy/releases/latest",
+      "softwareVersion": "1.2.5"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg: #000000;
-            --text: #ffffff;
-            --subtext: #888888;
-            --accent: #fff;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --card-border: rgba(255, 255, 255, 0.05);
-            --btn-hover: rgba(255, 255, 255, 0.1);
+            --bg-base: #060608;
+            --bg-card: rgba(255, 255, 255, 0.035);
+            --bg-card-hover: rgba(255, 255, 255, 0.07);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(255, 255, 255, 0.2);
+            --text-main: #fcfcfd;
+            --text-muted: #8e8e9f;
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --accent-pink: #ec4899;
+            --accent-green: #10b981;
+            --glow-gradient: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 80%);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
         body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
+            background-color: var(--bg-base);
+        }
+
+        /* Ambient Dynamic Background */
+        .ambient-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.45;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+
+        .orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #7c3aed 0%, rgba(124, 58, 237, 0) 70%);
+            top: -150px;
+            left: 20%;
+            animation-duration: 18s;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #0284c7 0%, rgba(2, 132, 199, 0) 70%);
+            top: 40%;
+            right: -100px;
+            animation-duration: 22s;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, #db2777 0%, rgba(219, 39, 119, 0) 70%);
+            bottom: -100px;
+            left: -100px;
+            animation-duration: 25s;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(40px, 30px) scale(1.1); }
+            100% { transform: translate(-30px, 50px) scale(0.95); }
+        }
+
+        /* Grid Overlay Effect */
+        .grid-backdrop {
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 64px 64px;
+            z-index: 1;
+            pointer-events: none;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        /* Layout Container */
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+            width: 100%;
+            margin-bottom: 3.5rem;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(14, 14, 18, 0.7);
+            border: 1px solid var(--border-card);
+            border-radius: 9999px;
+            padding: 0.75rem 1.5rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            transition: border-color 0.3s;
+        }
+
+        .navbar:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .brand-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+            display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
         }
 
-        /* SVG Mesh Gradient Background */
-        .bg-mesh {
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            z-index: -1;
-            opacity: 0.6;
-            background-image: 
-                radial-gradient(at 40% 20%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
-            animation: breathe 10s ease-in-out infinite alternate;
+        .brand-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: #ffffff;
         }
 
-        @keyframes breathe {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
         }
 
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            padding: 2rem;
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-item-link {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-item-link:hover {
+            color: var(--text-main);
+        }
+
+        .github-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-main);
+            padding: 0.45rem 0.9rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.25s;
+        }
+
+        .github-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .github-badge svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+        }
+
+        .star-count {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.1rem 0.45rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Hero Section */
+        .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            z-index: 1;
+            padding: 2.5rem 0 4.5rem;
         }
 
-        .logo {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            letter-spacing: -0.05em;
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid rgba(139, 92, 246, 0.35);
+            color: #c4b5fd;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
             margin-bottom: 2rem;
+            backdrop-filter: blur(12px);
+            animation: pulse-glow 3s infinite alternate ease-in-out;
         }
 
-        h1 {
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 10px rgba(139, 92, 246, 0.2); }
+            100% { box-shadow: 0 0 24px rgba(139, 92, 246, 0.5); }
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #a78bfa;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #a78bfa;
+        }
+
+        .hero-title {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: clamp(2.8rem, 7.5vw, 5.8rem);
             font-weight: 900;
-            line-height: 1.1;
+            line-height: 1.05;
             letter-spacing: -0.04em;
             margin-bottom: 1.5rem;
-            background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+            background: linear-gradient(180deg, #ffffff 10%, #d4d4d8 60%, #9ca3af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        p.subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--subtext);
-            max-width: 600px;
-            margin: 0 auto 4rem auto;
-            line-height: 1.5;
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+            font-weight: 400;
         }
 
-        .downloads {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        /* Download Action Cards Grid */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.75rem;
             width: 100%;
+            max-width: 840px;
+            margin: 0 auto 5rem;
         }
 
         .dl-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 28px;
             padding: 2.5rem 2rem;
-            width: 100%;
-            max-width: 340px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            color: var(--text);
-            position: relative;
+            color: var(--text-main);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        .dl-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
         }
 
         .dl-card:hover {
             transform: translateY(-8px);
-            background: var(--btn-hover);
-            border-color: rgba(255, 255, 255, 0.1);
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(139, 92, 246, 0.15);
         }
 
-        /* Subtle glowing edge effect on hover */
-        .dl-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .dl-card:hover::before { opacity: 1; }
-
-        .dl-icon {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-        }
-
-        .dl-card h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .dl-card p {
-            color: var(--subtext);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .btn-label {
-            background: #ffffff;
-            color: #000000;
-            padding: 0.8rem 1.5rem;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 1rem;
-            width: 100%;
-            transition: transform 0.2s;
-        }
-
-        .dl-card:hover .btn-label {
-            transform: scale(1.05);
-        }
-        
-        .version-tag {
-            position: absolute;
-            top: 1.2rem;
-            right: 1.2rem;
-            font-size: 0.75rem;
-            background: rgba(255,255,255,0.1);
-            padding: 0.2rem 0.6rem;
-            border-radius: 100px;
-            color: #ccc;
-            font-family: monospace;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .dl-card.loaded .version-tag {
+        .dl-card:hover::before {
             opacity: 1;
         }
 
+        .dl-card-badge {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            color: #d4d4d8;
+        }
+
+        .dl-icon-container {
+            width: 72px;
+            height: 72px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .dl-card:hover .dl-icon-container {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .dl-icon-container svg {
+            width: 36px;
+            height: 36px;
+            fill: currentColor;
+        }
+
+        .dl-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .dl-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 280px;
+        }
+
+        .dl-btn {
+            width: 100%;
+            background: #ffffff;
+            color: #000000;
+            padding: 0.95rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+        }
+
+        .dl-card:hover .dl-btn {
+            background: #ffffff;
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        .dl-meta-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #71717a;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Features Section */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-tag {
+            font-family: 'JetBrains Mono', monospace;
+            color: #a78bfa;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(180deg, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 24px;
+            padding: 2.2rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .feature-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            transform: translateY(-5px);
+        }
+
+        .feat-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feat-icon-box.purple { background: rgba(139, 92, 246, 0.15); color: #c4b5fd; }
+        .feat-icon-box.cyan { background: rgba(6, 182, 212, 0.15); color: #67e8f9; }
+        .feat-icon-box.pink { background: rgba(236, 72, 153, 0.15); color: #f472b6; }
+        .feat-icon-box.green { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
+        .feat-icon-box.amber { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+        .feat-icon-box.blue { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
+
+        .feat-icon-box svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
+        }
+
+        .feature-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Ecosystem Showcase */
+        .ecosystem-banner {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 32px;
+            padding: 3.5rem 2.5rem;
+            margin-bottom: 6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ecosystem-banner h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .ecosystem-banner p {
+            color: var(--text-muted);
+            max-width: 640px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .ecosystem-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .eco-pill {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #e4e4e7;
+        }
+
+        /* Fast Guide Section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        .guide-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 24px;
+            padding: 2rem;
+        }
+
+        .guide-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .step-num {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-card);
+            padding: 3.5rem 0 2.5rem;
+            margin-top: auto;
+            background: rgba(6, 6, 8, 0.8);
+            backdrop-filter: blur(20px);
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .footer-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--text-main);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                top: 0.5rem;
+                margin-bottom: 2rem;
+            }
+            .navbar {
+                padding: 0.6rem 1rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                padding: 1.5rem 0 3rem;
+            }
+            .downloads-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="bg-mesh"></div>
+    <!-- Ambient Glow Mesh -->
+    <div class="ambient-mesh">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+    <div class="grid-backdrop"></div>
 
-    <div class="container">
-        <div class="logo">Sonixy</div>
-        
-        <h1>Listen<br>Without Limits.</h1>
-        <p class="subtitle">Download, organize, and play your music seamlessly across Android and Windows.</p>
+    <div class="wrapper">
+        <!-- Navigation Header -->
+        <header>
+            <nav class="navbar">
+                <a href="#" class="brand-link">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <span class="brand-name">Sonixy</span>
+                </a>
 
-        <div class="downloads">
-            <!-- Windows Download -->
-            <a href="https://github.com/nourddinak/sonixy/releases/latest" id="win-link" class="dl-card">
-                <span class="version-tag" id="win-version">v...</span>
-                <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/>
-                </svg>
-                <h3>Windows</h3>
-                <p>Immersive desktop player with local network casting and auto-updates.</p>
-                <div class="btn-label" id="win-btn-text">Fetching latest...</div>
-            </a>
+                <ul class="nav-links">
+                    <li><a href="#features" class="nav-item-link">Features</a></li>
+                    <li><a href="#downloads" class="nav-item-link">Downloads</a></li>
+                    <li><a href="#quickstart" class="nav-item-link">Install Guide</a></li>
+                    <li><a href="https://github.com/nourddinak/sonixy/releases" target="_blank" class="nav-item-link">Changelog</a></li>
+                </ul>
 
-            <!-- Android Download -->
-            <a href="https://github.com/nourddinak/sonixy/releases/latest" id="and-link" class="dl-card">
-                <span class="version-tag" id="and-version">v...</span>
-                <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.022 3.503c-1.4362-.6481-3.1399-1.0259-4.9922-1.0259-1.8527 0-3.5564.3778-4.9926 1.0259l-2.022-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.695 11.4552.2612 15.6542.115 20.6725h23.77c-.1462-5.0183-2.58-9.2173-6.0025-11.3511"/>
-                </svg>
-                <h3>Android</h3>
-                <p>The ultimate mobile experience with zero-lag scrolling and offline lyrics.</p>
-                <div class="btn-label" id="and-btn-text">Fetching latest...</div>
-            </a>
-        </div>
+                <div class="nav-actions">
+                    <a href="https://github.com/nourddinak/sonixy" target="_blank" class="github-badge" id="github-star-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                        <span class="star-count" id="star-count-badge">★ Star</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="badge-pill">
+                <span class="pulse-dot"></span>
+                <span id="hero-version-text">Sonixy v1.2.5 Live — Download Now</span>
+            </div>
+
+            <h1 class="hero-title">Your Music.<br>Downloaded, Synced, Everywhere.</h1>
+            <p class="hero-subtitle">
+                The high-performance music ecosystem with Spotify link downloading, real-time timecoded lyrics, 60fps mobile playback, and seamless ambient Windows desktop streaming.
+            </p>
+
+            <!-- 1-Click Direct Download Cards -->
+            <div class="downloads-grid" id="downloads">
+                <!-- Android Direct Download -->
+                <div class="dl-card">
+                    <span class="dl-card-badge" id="and-version-tag">v1.2.5</span>
+                    <div class="dl-icon-container" style="color: #4ade80;">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.022 3.503c-1.4362-.6481-3.1399-1.0259-4.9922-1.0259-1.8527 0-3.5564.3778-4.9926 1.0259l-2.022-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.695 11.4552.2612 15.6542.115 20.6725h23.77c-.1462-5.0183-2.58-9.2173-6.0025-11.3511"/>
+                        </svg>
+                    </div>
+                    <h2>Android APK</h2>
+                    <p>Fluid 60fps playback, zero-stutter now-playing overlay, synced lyrics, and offline storage.</p>
+                    
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.2.5/sonixy-v1.2.5-release-signed.apk" id="direct-apk-btn" class="dl-btn" download>
+                        <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                        </svg>
+                        <span>Download APK</span>
+                    </a>
+                    
+                    <div class="dl-meta-info">
+                        <span>~40 MB</span>
+                        <span>•</span>
+                        <span>Android 7.0+</span>
+                        <span>•</span>
+                        <span>ARM64 / x86_64</span>
+                    </div>
+                </div>
+
+                <!-- Windows Direct Download -->
+                <div class="dl-card">
+                    <span class="dl-card-badge" id="win-version-tag">v1.2.4</span>
+                    <div class="dl-icon-container" style="color: #38bdf8;">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/>
+                        </svg>
+                    </div>
+                    <h2>Windows Setup</h2>
+                    <p>Ambient desktop player, synced timecoded lyrics, local network casting, and auto-updates.</p>
+                    
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.2.5/Sonixy-Desktop-Setup-1.2.4.exe" id="direct-exe-btn" class="dl-btn" download>
+                        <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                        </svg>
+                        <span>Download .exe</span>
+                    </a>
+                    
+                    <div class="dl-meta-info">
+                        <span>~106 MB</span>
+                        <span>•</span>
+                        <span>Windows 10 / 11</span>
+                        <span>•</span>
+                        <span>Auto-Updates</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Showcase Banner -->
+        <section class="ecosystem-banner">
+            <h2>Seamless Cross-Device Audio Ecosystem</h2>
+            <p>
+                Sonixy connects your Android smartphone and Windows desktop seamlessly. Browse and trigger downloads on mobile, stream directly to your PC via mDNS casting, and control volume and track seek from anywhere in your room.
+            </p>
+            <div class="ecosystem-pills">
+                <div class="eco-pill">⚡ Zero-Lag Architecture</div>
+                <div class="eco-pill">📡 Local Network Casting</div>
+                <div class="eco-pill">🎤 Synced Timecoded LRC</div>
+                <div class="eco-pill">🔒 100% Offline Capable</div>
+                <div class="eco-pill">🚗 Drive Mode Ready</div>
+            </div>
+        </section>
+
+        <!-- Feature Grid Section -->
+        <section id="features" style="padding-top: 1rem;">
+            <div class="section-header">
+                <span class="section-tag">Core Capabilities</span>
+                <h2 class="section-title">Built for Pure Audio Freedom</h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box purple">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Spotify Link Resolver</h3>
+                    <p>Paste any Spotify track, album, playlist, or artist link. Sonixy extracts complete metadata, high-resolution album artwork, and high-fidelity audio streams in seconds.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box cyan">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Synced Lyrics</h3>
+                    <p>Enjoy live, syllable-precise karaoke lyrics. Missing lyrics? The built-in Lyrics Search Engine scans and saves sidecar `.lrc` files automatically.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box pink">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Ultra-Smooth 60fps UI</h3>
+                    <p>Rebuilt with decoupled Jetpack Compose architecture and hardware graphics transforms. Zero jank, zero dropped frames, and instant player overlay open/close response.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box green">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                        </svg>
+                    </div>
+                    <h3>Ambient Desktop Player</h3>
+                    <p>Immerse yourself on Windows with glowing ambient cover backdrops, lyric sidebar, hotkey controls, and automatic background updates from GitHub.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box amber">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                        </svg>
+                    </div>
+                    <h3>Automotive & Drive Mode</h3>
+                    <p>Large tactile buttons and swipe gestures designed for in-car dashboard mounts and distracted-free road trips.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feat-icon-box blue">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                        </svg>
+                    </div>
+                    <h3>100% Offline & Private</h3>
+                    <p>No telemetry, no tracking, no mandatory cloud accounts. You own your music files directly on your device storage forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Guide -->
+        <section id="quickstart" style="padding-top: 1rem;">
+            <div class="section-header">
+                <span class="section-tag">Quick Installation</span>
+                <h2 class="section-title">Get Started in Seconds</h2>
+            </div>
+
+            <div class="guide-grid">
+                <!-- Mobile Guide -->
+                <div class="guide-card">
+                    <h3>
+                        <svg style="width: 24px; height: 24px; fill: #4ade80;" viewBox="0 0 24 24">
+                            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                        </svg>
+                        Android Setup
+                    </h3>
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <span class="step-num">1</span>
+                            <span>Click the <strong>Download APK</strong> button to save the signed package.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-num">2</span>
+                            <span>Tap the downloaded `.apk` file and allow <em>Install unknown apps</em> if prompted.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-num">3</span>
+                            <span>Open Sonixy, paste your first Spotify playlist link, and enjoy!</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Windows Guide -->
+                <div class="guide-card">
+                    <h3>
+                        <svg style="width: 24px; height: 24px; fill: #38bdf8;" viewBox="0 0 24 24">
+                            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/>
+                        </svg>
+                        Windows Setup
+                    </h3>
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <span class="step-num">1</span>
+                            <span>Click the <strong>Download .exe</strong> button to get the installer.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-num">2</span>
+                            <span>Run <code>Sonixy-Desktop-Setup-1.2.4.exe</code>. Setup completes automatically.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-num">3</span>
+                            <span>Launch Sonixy from your Desktop or Start Menu. Future updates apply in background!</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <span class="footer-logo">Sonixy</span>
+                    <span class="footer-copy">Crafted with ❤️ by nourddinak. Open-Source under MIT License.</span>
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="https://github.com/nourddinak/sonixy" target="_blank" class="footer-link">GitHub Repo</a></li>
+                    <li><a href="https://github.com/nourddinak/sonixy/releases" target="_blank" class="footer-link">All Releases</a></li>
+                    <li><a href="https://github.com/nourddinak/sonixy/issues" target="_blank" class="footer-link">Report Issue</a></li>
+                    <li><a href="https://github.com/nourddinak/sonixy/blob/master/LICENSE" target="_blank" class="footer-link">License</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
+    <!-- Dynamic Release and Star Fetcher -->
     <script>
-        async function fetchLatestRelease() {
+        async function fetchGitHubData() {
             try {
-                // Fetch actual latest release data from GitHub API
-                const res = await fetch('https://api.github.com/repos/nourddinak/sonixy/releases/latest');
-                if (!res.ok) throw new Error('Failed to fetch release');
-                const data = await res.json();
-                const version = data.tag_name || data.name;
-
-                // Find APK and EXE direct download assets
-                const apkAsset = data.assets.find(a => a.name.endsWith('.apk'));
-                const exeAsset = data.assets.find(a => a.name.endsWith('.exe'));
-
-                // Update Windows Card to instantly download the .exe
-                if (exeAsset) {
-                    const winLink = document.getElementById('win-link');
-                    winLink.href = exeAsset.browser_download_url;
-                    winLink.classList.add('loaded');
-                    document.getElementById('win-version').textContent = version;
-                    document.getElementById('win-btn-text').textContent = 'Download .exe';
+                // 1. Fetch Repository Details for live Star Count
+                const repoRes = await fetch('https://api.github.com/repos/nourddinak/sonixy');
+                if (repoRes.ok) {
+                    const repoData = await repoRes.json();
+                    if (repoData.stargazers_count !== undefined) {
+                        const starEl = document.getElementById('star-count-badge');
+                        starEl.textContent = `★ ${repoData.stargazers_count}`;
+                    }
                 }
 
-                // Update Android Card to instantly download the .apk
-                if (apkAsset) {
-                    const andLink = document.getElementById('and-link');
-                    andLink.href = apkAsset.browser_download_url;
-                    andLink.classList.add('loaded');
-                    document.getElementById('and-version').textContent = version;
-                    document.getElementById('and-btn-text').textContent = 'Download .apk';
-                }
+                // 2. Fetch Latest Release Details to dynamically sync direct download links
+                const relRes = await fetch('https://api.github.com/repos/nourddinak/sonixy/releases/latest');
+                if (relRes.ok) {
+                    const relData = await relRes.json();
+                    const tag = relData.tag_name || 'v1.2.5';
+                    
+                    document.getElementById('hero-version-text').textContent = `Sonixy ${tag} Live — Download Now`;
+                    document.getElementById('and-version-tag').textContent = tag;
 
+                    const apkAsset = relData.assets.find(a => a.name.endsWith('.apk'));
+                    if (apkAsset) {
+                        document.getElementById('direct-apk-btn').href = apkAsset.browser_download_url;
+                    }
+
+                    const exeAsset = relData.assets.find(a => a.name.endsWith('.exe'));
+                    if (exeAsset) {
+                        document.getElementById('direct-exe-btn').href = exeAsset.browser_download_url;
+                    }
+                }
             } catch (err) {
-                console.error("Falling back to manual release page link:", err);
-                // Fallback text if they get rate limited
-                document.getElementById('win-btn-text').textContent = 'Check Latest on GitHub';
-                document.getElementById('and-btn-text').textContent = 'Check Latest on GitHub';
+                console.log("Using static pre-configured direct download links:", err);
             }
         }
 
-        fetchLatestRelease();
+        fetchGitHubData();
     </script>
 </body>
 </html>
