@@ -10,5 +10,7 @@ Thumbs.db
 *.keystore
 *.jks
 
-# Ignore APK files
+# Ignore Binary Releases (hosted on GitHub Releases)
 *.apk
+*.exe
+*.blockmap

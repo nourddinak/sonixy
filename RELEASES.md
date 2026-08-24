@@ -1,5 +1,27 @@
 # Sonixy Releases
 
+## v1.2.5
+
+- File: `releases/sonixy-v1.2.5-release-signed.apk`
+- Version name: `1.2.5`
+- Version code: `8`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `76CA1012EF03AC609EEAAE1D05F0F0FD8EE088ABA13F6E92B856953B8FC099CF`
+
+**Desktop Companion**
+- File: `releases/desktop/Sonixy-Desktop-Setup-1.2.4.exe`
+- Auto-Updater: `releases/desktop/latest.yml`
+- SHA-256: `41C993C7976E6D7FAB6F52C13598F3054153D930D11B1AA3C04BE403B1CB13B9`
+
+### Release Notes
+
+Sonixy v1.2.5 brings major UI performance enhancements, ultra-smooth player overlay transitions, full isolation for background media, and a redesigned Settings & Update hub.
+
+- **Zero-Stutter Player Overlay**: Completely eliminated open/close lag by removing full-hierarchy recompositions and utilizing hardware-accelerated `Modifier.graphicsLayer` transforms with fluid spring physics.
+- **Reels Background & Viewport Fix**: Resolved reels playing when off-screen or peeking into neighboring tabs.
+- **Modernized Settings & Update Hub**: Reorganized Settings with prominent in-app App & Python Engine update cards at the top, storage breakdown, and diagnostics.
+- **Icon Modernization & Performance**: Updated navigation, playback, and volume icons to AutoMirrored standards and stripped redundant animation wrappers.
+
 ## v1.2.4
 
 - File: `releases/sonixy-v1.2.4-release-signed.apk`

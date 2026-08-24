@@ -19,8 +19,8 @@ https://github.com/nourddinak/sonixy/releases/latest
 Current packaged releases in this folder:
 
 ```text
-releases/sonixy-v1.2.4-release-signed.apk
-releases/desktop/Sonixy Desktop Setup 1.2.3.exe
+releases/sonixy-v1.2.5-release-signed.apk
+releases/desktop/Sonixy-Desktop-Setup-1.2.4.exe
 releases/desktop/latest.yml
 ```
 
@@ -64,7 +64,7 @@ Android only allows updating when the new APK has a higher `versionCode` and use
 ## Install (Desktop)
 
 1. Open the latest GitHub release.
-2. Download `Sonixy Desktop Setup 1.2.3.exe`.
+2. Download `Sonixy-Desktop-Setup-1.2.4.exe`.
 3. Run the installer. It will install the app and automatically create a desktop shortcut.
 4. The desktop app will automatically update itself in the background when newer releases are published to GitHub!
 
@@ -82,13 +82,13 @@ Sonixy can check GitHub Releases for a newer APK.
 Use PowerShell:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.4-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\releases\sonixy-v1.2.5-release-signed.apk
 ```
 
 Expected SHA-256:
 
 ```text
-16E0730643B1342773995E05FBED94C2FF4F0B6A0FF4595FC287DBCDE61FE955
+76CA1012EF03AC609EEAAE1D05F0F0FD8EE088ABA13F6E92B856953B8FC099CF
 ```
 
 ## Android Support
