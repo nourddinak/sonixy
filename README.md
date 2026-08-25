@@ -24,8 +24,8 @@
 
 | Platform | File | Version | Size | Direct Download |
 | :--- | :--- | :--- | :--- | :--- |
-| **Android** | `sonixy-v1.2.5-release-signed.apk` | **v1.2.5** | ~40.0 MB | [**📥 Download APK**](https://github.com/nourddinak/sonixy/releases/download/v1.2.5/sonixy-v1.2.5-release-signed.apk) |
-| **Windows Desktop** | `Sonixy-Desktop-Setup-1.2.4.exe` | **v1.2.4** | ~106.4 MB | [**📥 Download .exe**](https://github.com/nourddinak/sonixy/releases/download/v1.2.5/Sonixy-Desktop-Setup-1.2.4.exe) |
+| **Android** | `sonixy-v1.2.6-release-signed.apk` | **v1.2.6** | ~40.0 MB | [**📥 Download APK**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/sonixy-v1.2.6-release-signed.apk) |
+| **Windows Desktop** | `Sonixy-Desktop-Setup-1.2.6.exe` | **v1.2.6** | ~106.4 MB | [**📥 Download .exe**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/Sonixy-Desktop-Setup-1.2.6.exe) |
 
 ---
 
@@ -59,13 +59,13 @@
 ## 📲 Installation Guide
 
 ### Android
-1. Download [**`sonixy-v1.2.5-release-signed.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.2.5/sonixy-v1.2.5-release-signed.apk).
+1. Download [**`sonixy-v1.2.6-release-signed.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/sonixy-v1.2.6-release-signed.apk).
 2. Tap the downloaded `.apk` in your notifications or file manager.
 3. Allow *"Install unknown apps"* if prompted by Android.
 4. Launch Sonixy and enjoy!
 
 ### Windows
-1. Download [**`Sonixy-Desktop-Setup-1.2.4.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.2.5/Sonixy-Desktop-Setup-1.2.4.exe).
+1. Download [**`Sonixy-Desktop-Setup-1.2.6.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/Sonixy-Desktop-Setup-1.2.6.exe).
 2. Run the installer. It will install the application and create a Desktop shortcut.
 3. Future updates are applied automatically in the background.
 
@@ -75,20 +75,20 @@
 
 Verify the integrity of downloaded files using PowerShell or Bash:
 
-### Android APK (`v1.2.5`)
+### Android APK (`v1.2.6`)
 ```powershell
-Get-FileHash -Algorithm SHA256 .\sonixy-v1.2.5-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\sonixy-v1.2.6-release-signed.apk
 ```
 ```text
-SHA-256: 76CA1012EF03AC609EEAAE1D05F0F0FD8EE088ABA13F6E92B856953B8FC099CF
+SHA-256: AF4D35A5970F9250062F41B5822A460BC8F962C46558CB3770119B039FADE742
 ```
 
-### Windows Installer (`v1.2.4`)
+### Windows Installer (`v1.2.6`)
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Sonixy-Desktop-Setup-1.2.4.exe
+Get-FileHash -Algorithm SHA256 .\Sonixy-Desktop-Setup-1.2.6.exe
 ```
 ```text
-SHA-256: 41C993C7976E6D7FAB6F52C13598F3054153D930D11B1AA3C04BE403B1CB13B9
+SHA-256: 271E2FEE71F6567F5B5620F9AC5B3A2B4D692D7E3A23D966B293147538410DFB
 ```
 
 ---

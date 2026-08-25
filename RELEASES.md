@@ -1,5 +1,26 @@
 # Sonixy Releases
 
+## v1.2.6
+
+- File: `releases/sonixy-v1.2.6-release-signed.apk`
+- Version name: `1.2.6`
+- Version code: `9`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `AF4D35A5970F9250062F41B5822A460BC8F962C46558CB3770119B039FADE742`
+
+**Desktop Companion**
+- File: `releases/desktop/Sonixy-Desktop-Setup-1.2.6.exe`
+- Auto-Updater: `releases/desktop/latest.yml`
+- SHA-256: `271E2FEE71F6567F5B5620F9AC5B3A2B4D692D7E3A23D966B293147538410DFB`
+
+### Release Notes
+
+Sonixy v1.2.6 introduces a massive performance overhaul to the mobile library, a premium UI redesign, and a dynamic floating mini player.
+
+- **Super Performance**: Completely rewrote the Library list architecture, ripping out custom paging in favor of pure native Jetpack Compose virtualization and aggressive Coil image caching. Massive libraries now scroll effortlessly at 120fps with zero lag.
+- **Premium Glassmorphism UI**: Introduced sleek translucent gradient headers, ExtraBold modern typography, and beautifully rounded track cards for a high-end feel.
+- **Floating Pill Mini Player**: Replaced the docked player bar with a gorgeous floating pill that dynamically adapts to your selected theme (Light/Dark/AMOLED) with a stunning, context-aware glowing drop shadow.
+
 ## v1.2.5
 
 - File: `releases/sonixy-v1.2.5-release-signed.apk`
