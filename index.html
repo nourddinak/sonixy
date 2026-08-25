@@ -49,7 +49,7 @@
         "url": "https://github.com/nourddinak"
       },
       "downloadUrl": "https://github.com/nourddinak/sonixy/releases/latest",
-      "softwareVersion": "1.2.5"
+      "softwareVersion": "1.2.6"
     }
     </script>
 
@@ -727,7 +727,7 @@
         <section class="hero">
             <div class="badge-pill">
                 <span class="pulse-dot"></span>
-                <span id="hero-version-text">Sonixy v1.2.5 Live — Free & Open Source</span>
+                <span id="hero-version-text">Sonixy v1.2.6 Live — Free & Open Source</span>
             </div>
 
             <h1 class="hero-title">Your Music.<br>Downloaded, Synced, Everywhere.</h1>
@@ -739,7 +739,7 @@
             <div class="downloads-grid" id="downloads">
                 <!-- Android Direct Download -->
                 <div class="dl-card">
-                    <span class="dl-card-badge" id="and-version-tag">v1.2.5</span>
+                    <span class="dl-card-badge" id="and-version-tag">v1.2.6</span>
                     <div class="dl-icon-container">
                         <svg viewBox="0 0 24 24">
                             <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.022 3.503c-1.4362-.6481-3.1399-1.0259-4.9922-1.0259-1.8527 0-3.5564.3778-4.9926 1.0259l-2.022-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.695 11.4552.2612 15.6542.115 20.6725h23.77c-.1462-5.0183-2.58-9.2173-6.0025-11.3511"/>
@@ -748,7 +748,7 @@
                     <h2>Android APK</h2>
                     <p>Fluid 60fps playback, zero-stutter now-playing overlay, synced lyrics, and offline storage.</p>
                     
-                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.2.5/sonixy-v1.2.5-release-signed.apk" id="direct-apk-btn" class="dl-btn" download>
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.2.6/sonixy-v1.2.6-release-signed.apk" id="direct-apk-btn" class="dl-btn" download>
                         <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
                         </svg>
@@ -766,7 +766,7 @@
 
                 <!-- Windows Direct Download -->
                 <div class="dl-card">
-                    <span class="dl-card-badge" id="win-version-tag">v1.2.4</span>
+                    <span class="dl-card-badge" id="win-version-tag">v1.2.6</span>
                     <div class="dl-icon-container">
                         <svg viewBox="0 0 24 24">
                             <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/>
@@ -775,7 +775,7 @@
                     <h2>Windows Setup</h2>
                     <p>Ambient desktop player, synced timecoded lyrics, local network casting, and auto-updates.</p>
                     
-                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.2.5/Sonixy-Desktop-Setup-1.2.4.exe" id="direct-exe-btn" class="dl-btn" download>
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.2.6/Sonixy-Desktop-Setup-1.2.6.exe" id="direct-exe-btn" class="dl-btn" download>
                         <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
                         </svg>
@@ -931,7 +931,7 @@
                         </li>
                         <li class="step-item">
                             <span class="step-num">2</span>
-                            <span>Run <code>Sonixy-Desktop-Setup-1.2.4.exe</code>. Setup completes automatically.</span>
+                            <span>Run <code>Sonixy-Desktop-Setup-1.2.6.exe</code>. Setup completes automatically.</span>
                         </li>
                         <li class="step-item">
                             <span class="step-num">3</span>
@@ -978,7 +978,7 @@
                 const relRes = await fetch('https://api.github.com/repos/nourddinak/sonixy/releases/latest');
                 if (relRes.ok) {
                     const relData = await relRes.json();
-                    const tag = relData.tag_name || 'v1.2.5';
+                    const tag = relData.tag_name || 'v1.2.6';
                     
                     document.getElementById('hero-version-text').textContent = `Sonixy ${tag} Live — Free & Open Source`;
                     document.getElementById('and-version-tag').textContent = tag;
