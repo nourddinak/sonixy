@@ -6,7 +6,7 @@
 - Version name: `1.2.6`
 - Version code: `9`
 - Application ID: `com.nourddinak.sonixy`
-- SHA-256: `AF4D35A5970F9250062F41B5822A460BC8F962C46558CB3770119B039FADE742`
+- SHA-256: `0856C348CE725A8E022C62B18638DFA0974F0B3429F57AEFC2CCE1A067723200`
 
 **Desktop Companion**
 - File: `releases/desktop/Sonixy-Desktop-Setup-1.2.6.exe`

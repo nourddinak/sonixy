@@ -80,7 +80,7 @@ Verify the integrity of downloaded files using PowerShell or Bash:
 Get-FileHash -Algorithm SHA256 .\sonixy-v1.2.6-release-signed.apk
 ```
 ```text
-SHA-256: AF4D35A5970F9250062F41B5822A460BC8F962C46558CB3770119B039FADE742
+SHA-256: 0856C348CE725A8E022C62B18638DFA0974F0B3429F57AEFC2CCE1A067723200
 ```
 
 ### Windows Installer (`v1.2.6`)
