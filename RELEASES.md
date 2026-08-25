@@ -11,7 +11,7 @@
 **Desktop Companion**
 - File: `releases/desktop/Sonixy-Desktop-Setup-1.2.6.exe`
 - Auto-Updater: `releases/desktop/latest.yml`
-- SHA-256: `271E2FEE71F6567F5B5620F9AC5B3A2B4D692D7E3A23D966B293147538410DFB`
+- SHA-256: `5739372F94AFCE120A00BC7C1BA233A402DFF077CD74E6FDC98825CBD8E94DC6`
 
 ### Release Notes
 
