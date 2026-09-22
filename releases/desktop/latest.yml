@@ -1,8 +1,8 @@
 version: 1.2.6
 files:
   - url: Sonixy-Desktop-Setup-1.2.6.exe
-    sha512: W1EJmmM0Qh7PkDccaF+PPxHM3OKTNC6KCThfKlOQ+RGFn9h/9V9bYdwfDgmfR9eemYz/RmPqTvZI9K4L0d/1DQ==
-    size: 106417594
+    sha512: X+U7QORQE3OYGqp2n0+EYzaMX/RY5MlK6bjTwyLKSA2b3tP1v9zD6ulWmMc/t+27QptDyFcitlbteQIRiWnhyQ==
+    size: 106414954
 path: Sonixy-Desktop-Setup-1.2.6.exe
-sha512: W1EJmmM0Qh7PkDccaF+PPxHM3OKTNC6KCThfKlOQ+RGFn9h/9V9bYdwfDgmfR9eemYz/RmPqTvZI9K4L0d/1DQ==
-releaseDate: '2026-08-25T11:16:40.093Z'
+sha512: X+U7QORQE3OYGqp2n0+EYzaMX/RY5MlK6bjTwyLKSA2b3tP1v9zD6ulWmMc/t+27QptDyFcitlbteQIRiWnhyQ==
+releaseDate: '2026-08-25T11:56:05.600Z'
