@@ -4,8 +4,10 @@ This folder contains downloadable Sonixy APK releases.
 
 ## Files
 
+- `sonixy-v1.3.0-release-signed.apk`
 - `sonixy-v1.2.6-release-signed.apk`
-- `sonixy-v1.2.6-release-signed.apk`
+- `sonixy-v1.2.5-release-signed.apk`
+- `sonixy-v1.2.4-release-signed.apk`
 - `sonixy-v1.2.3-release-signed.apk`
 - `sonixy-v1.2.2-release-signed.apk`
 - `sonixy-v1.2.1-release-signed.apk`
@@ -14,7 +16,23 @@ This folder contains downloadable Sonixy APK releases.
 - `sonixy-v1.0-release-signed.apk`
 
 
+### sonixy-v1.3.0-release-signed.apk
+
+SHA-256:
+
+```text
+930709D99A124FE09F10A9787E8E05013036110D7350A1DA67C6C436841E0708
+```
+
 ### sonixy-v1.2.6-release-signed.apk
+
+SHA-256:
+
+```text
+0856C348CE725A8E022C62B18638DFA0974F0B3429F57AEFC2CCE1A067723200
+```
+
+### sonixy-v1.2.5-release-signed.apk
 
 SHA-256:
 
@@ -22,7 +40,7 @@ SHA-256:
 76CA1012EF03AC609EEAAE1D05F0F0FD8EE088ABA13F6E92B856953B8FC099CF
 ```
 
-### sonixy-v1.2.6-release-signed.apk
+### sonixy-v1.2.4-release-signed.apk
 
 SHA-256:
 

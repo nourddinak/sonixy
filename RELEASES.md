@@ -1,5 +1,28 @@
 # Sonixy Releases
 
+## v1.3.0
+
+- File: `releases/sonixy-v1.3.0-release-signed.apk`
+- Version name: `1.3.0`
+- Version code: `10`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `930709D99A124FE09F10A9787E8E05013036110D7350A1DA67C6C436841E0708`
+
+**Desktop Companion**
+- File: `releases/desktop/Sonixy-Desktop-Setup-1.2.6.exe`
+- Auto-Updater: `releases/desktop/latest.yml`
+- SHA-256: `5739372F94AFCE120A00BC7C1BA233A402DFF077CD74E6FDC98825CBD8E94DC6`
+
+### Release Notes
+
+Sonixy v1.3.0 introduces Drive Mode, an enhanced multi-view Library experience, a background download keep-alive service, an in-app feedback hub, and local network pairing with Desktop.
+
+- **Drive Mode Overlay**: Safe, high-contrast AMOLED in-car UI with oversized 80dp touch targets, instant swipe controls, and glanceable track info for hands-free listening.
+- **Enhanced Library Navigation**: Redesigned library tabs with dedicated Folders, Artists, Albums, and Playlist filtering for effortless offline collection management.
+- **Background Download Keep-Alive Service**: Persistent foreground service keeps downloads running uninterrupted even during deep battery optimization and device sleep.
+- **In-App Feedback Hub**: Built-in support to report issues, suggest features, and view diagnostic logs without leaving the app.
+- **Sleep Timer & Desktop LAN Sync**: Set bedtime playback countdowns and seamlessly cast/sync playback state with Sonixy Desktop on your local Wi-Fi.
+
 ## v1.2.6
 
 - File: `releases/sonixy-v1.2.6-release-signed.apk`

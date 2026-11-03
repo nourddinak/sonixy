@@ -24,7 +24,7 @@
 
 | Platform | File | Version | Size | Direct Download |
 | :--- | :--- | :--- | :--- | :--- |
-| **Android** | `sonixy-v1.2.6-release-signed.apk` | **v1.2.6** | ~40.0 MB | [**📥 Download APK**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/sonixy-v1.2.6-release-signed.apk) |
+| **Android** | `sonixy-v1.3.0-release-signed.apk` | **v1.3.0** | ~39.6 MB | [**📥 Download APK**](https://github.com/nourddinak/sonixy/releases/download/v1.3.0/sonixy-v1.3.0-release-signed.apk) |
 | **Windows Desktop** | `Sonixy-Desktop-Setup-1.2.6.exe` | **v1.2.6** | ~106.4 MB | [**📥 Download .exe**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/Sonixy-Desktop-Setup-1.2.6.exe) |
 
 ---
@@ -59,7 +59,7 @@
 ## 📲 Installation Guide
 
 ### Android
-1. Download [**`sonixy-v1.2.6-release-signed.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/sonixy-v1.2.6-release-signed.apk).
+1. Download [**`sonixy-v1.3.0-release-signed.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.3.0/sonixy-v1.3.0-release-signed.apk).
 2. Tap the downloaded `.apk` in your notifications or file manager.
 3. Allow *"Install unknown apps"* if prompted by Android.
 4. Launch Sonixy and enjoy!
@@ -75,12 +75,12 @@
 
 Verify the integrity of downloaded files using PowerShell or Bash:
 
-### Android APK (`v1.2.6`)
+### Android APK (`v1.3.0`)
 ```powershell
-Get-FileHash -Algorithm SHA256 .\sonixy-v1.2.6-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\sonixy-v1.3.0-release-signed.apk
 ```
 ```text
-SHA-256: 0856C348CE725A8E022C62B18638DFA0974F0B3429F57AEFC2CCE1A067723200
+SHA-256: 930709D99A124FE09F10A9787E8E05013036110D7350A1DA67C6C436841E0708
 ```
 
 ### Windows Installer (`v1.2.6`)
