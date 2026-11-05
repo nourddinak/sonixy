@@ -1,5 +1,26 @@
 # Sonixy Releases
 
+## v1.3.1
+
+- File: `releases/sonixy-v1.3.1-release-signed.apk`
+- Version name: `1.3.1`
+- Version code: `11`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `D7D393705B1B87F1FDD0134897AA72526734514672D6D9793A73B5322EB9039F`
+
+**Desktop Companion** (unchanged)
+- File: `releases/desktop/Sonixy-Desktop-Setup-1.2.6.exe`
+- Auto-Updater: `releases/desktop/latest.yml`
+- SHA-256: `5739372F94AFCE120A00BC7C1BA233A402DFF077CD74E6FDC98825CBD8E94DC6`
+
+### Release Notes
+
+Sonixy v1.3.1 widens where you can pull music from, with branded source pickers and downloader improvements.
+
+- **More Source Platforms**: YouTube Music, Bandcamp, Deezer, Apple Music, Tidal, Mixcloud, TikTok, Instagram, X, Facebook, Vimeo, Dailymotion and Twitch, plus a "Web link" option for any site yt-dlp supports.
+- **Platform Logos**: Each source shows its own logo and colour in the downloader.
+- **Downloader & Library Fixes**: Improvements to the download engine, the YouTube path and the library screens.
+
 ## v1.3.0
 
 - File: `releases/sonixy-v1.3.0-release-signed.apk`
