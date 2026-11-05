@@ -4,7 +4,7 @@
 
 # Sonixy
 
-### Free music downloader & offline player for Android and Windows
+### Free music downloader & offline player for Android, with Sonixy Connect for Windows and Mac
 
 Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** and more, and get properly tagged tracks with album art and synced lyrics, ready to play offline.
 
@@ -15,6 +15,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <br/>
 [![Android](https://img.shields.io/badge/Android-7.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/nourddinak/sonixy/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/nourddinak/sonixy/releases/latest)
+[![macOS](https://img.shields.io/badge/macOS-12%2B-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/nourddinak/sonixy/releases/latest)
 
 **[🌐 Website](https://nourddinak.github.io/sonixy/)** ·
 **[📥 Download](https://github.com/nourddinak/sonixy/releases/latest)** ·
@@ -37,8 +38,9 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 
 | Platform | Version | Size | Download |
 | :--- | :---: | :---: | :--- |
-| **Android** (7.0+) | **v1.3.1** | ~38.0 MB | [**sonixy-v1.3.1-release-signed.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.3.1/sonixy-v1.3.1-release-signed.apk) |
-| **Windows** (10 / 11) | **v1.2.6** | ~106.4 MB | [**Sonixy-Desktop-Setup-1.2.6.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/Sonixy-Desktop-Setup-1.2.6.exe) |
+| **Android** (7.0+) | **v1.4.0** | ~39.8 MB | [**Sonixy-v1.4.0-code12-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-v1.4.0-code12-release.apk) |
+| **Windows** (10 / 11): Sonixy Connect | **v2.0.0** | ~104.3 MB | [**Sonixy-Connect-Setup-2.0.0.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-Setup-2.0.0.exe) |
+| **macOS** (12+, Intel & Apple silicon): Sonixy Connect | **v2.0.0** | ~218.3 MB | [**Sonixy-Connect-2.0.0-mac.dmg**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-2.0.0-mac.dmg) |
 
 > Only download Sonixy from this repository's [Releases page](https://github.com/nourddinak/sonixy/releases) or the [official website](https://nourddinak.github.io/sonixy/). Check the SHA-256 hashes [below](#-verify-your-download).
 
@@ -70,10 +72,12 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 - 🚗 **Drive Mode**: a high-contrast AMOLED in-car screen with big 80 dp touch targets and swipe-to-skip.
 - ⏱️ **Sleep timer**, Reels-style music video feed, and an in-app feedback hub.
 
-### Windows desktop companion
-- Ambient player that picks up colours from the album art.
-- 📡 **LAN sync**: find and control desktop playback from your phone over Wi-Fi (mDNS).
-- Automatic background updates.
+### Sonixy Connect (Windows & Mac)
+- 🔊 Plays whatever Sonixy is playing on your phone through your computer's speakers.
+- 📡 Pair once over Wi-Fi (or scan a QR code); after that it reconnects by itself.
+- 📱 Choose on the phone whether it stays silent or plays too. If the PC drops, the music pauses.
+- 🛡️ Fixes Windows Firewall for you with one admin prompt, so it works on Public networks too.
+- Automatic updates on Windows.
 
 ---
 
@@ -82,7 +86,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details open>
 <summary><b>Android</b></summary>
 
-1. Download [**`sonixy-v1.3.1-release-signed.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.3.1/sonixy-v1.3.1-release-signed.apk).
+1. Download [**`Sonixy-v1.4.0-code12-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-v1.4.0-code12-release.apk).
 2. Open the file from your notifications or file manager.
 3. Allow **"Install unknown apps"** if Android asks.
 4. Open Sonixy, paste a link, and press download.
@@ -92,9 +96,20 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details>
 <summary><b>Windows</b></summary>
 
-1. Download [**`Sonixy-Desktop-Setup-1.2.6.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.2.6/Sonixy-Desktop-Setup-1.2.6.exe).
-2. Run the installer. It adds a desktop shortcut.
-3. Updates install automatically from then on.
+1. Download [**`Sonixy-Connect-Setup-2.0.0.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-Setup-2.0.0.exe).
+2. Run the installer. On first launch, allow the admin prompt once so your phone can reach the PC on any network.
+3. On your phone, open the player, tap the cast icon, pick your PC and click **Allow** on the PC.
+4. Updates install automatically from then on.
+
+</details>
+
+<details>
+<summary><b>Mac</b></summary>
+
+1. Download [**`Sonixy-Connect-2.0.0-mac.dmg`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-2.0.0-mac.dmg) (one file for Intel and Apple silicon).
+2. Open it and drag **Sonixy Connect** into Applications.
+3. The app isn't notarized by Apple, so macOS blocks the first launch: open **System Settings → Privacy & Security** and click **Open Anyway**. Then allow **Local Network** access.
+4. Pair from your phone like on Windows. The Mac version doesn't update itself; download new versions from the Releases page.
 
 </details>
 
@@ -103,13 +118,16 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 ## 🔐 Verify your download
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\sonixy-v1.3.1-release-signed.apk
+Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.0-code12-release.apk
 ```
+
+On a Mac: `shasum -a 256 Sonixy-Connect-2.0.0-mac.dmg`
 
 | File | SHA-256 |
 | :--- | :--- |
-| `sonixy-v1.3.1-release-signed.apk` | `D7D393705B1B87F1FDD0134897AA72526734514672D6D9793A73B5322EB9039F` |
-| `Sonixy-Desktop-Setup-1.2.6.exe` | `5739372F94AFCE120A00BC7C1BA233A402DFF077CD74E6FDC98825CBD8E94DC6` |
+| `Sonixy-v1.4.0-code12-release.apk` | `232BFC5D838A85577062CA16A8CB135847588501AD7EC288BDC27092D723CA4A` |
+| `Sonixy-Connect-Setup-2.0.0.exe` | `D1A41287150CCEF0486BC5EF8A93027A3AC8C850B3B8A136D9E07F58A17F40F9` |
+| `Sonixy-Connect-2.0.0-mac.dmg` | `B53694F19E2EBB69C93821C60D7472BA736A03C0293D011110977A1D56106A48` |
 
 Hashes for older versions are in [`releases/README.md`](releases/README.md).
 
@@ -142,7 +160,7 @@ No. Sonixy is freeware: the apps are free to use, but the source code is closed.
 ## 🛠️ Built with
 
 **Android:** Kotlin · Jetpack Compose · Media3 / ExoPlayer · Chaquopy (embedded Python) · Coroutines & Flow · Ktor · Material 3
-**Desktop:** Electron · Vite · Tailwind CSS · WebSockets · Bonjour / mDNS
+**Desktop (Sonixy Connect):** Electron · React · Vite · WebSockets · Bonjour / mDNS
 **Engine:** Python · `yt-dlp` · SpotDL resolver · Mutagen tagger
 
 ---

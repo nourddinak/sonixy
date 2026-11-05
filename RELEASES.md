@@ -1,5 +1,29 @@
 # Sonixy Releases
 
+## v1.4.0
+
+- File: `Sonixy-v1.4.0-code12-release.apk` (also `Sonixy-v1.4.0-code12-release.aab`)
+- Version name: `1.4.0`
+- Version code: `12`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `232BFC5D838A85577062CA16A8CB135847588501AD7EC288BDC27092D723CA4A`
+
+**Sonixy Connect 2.0.0** (replaces Sonixy Desktop; Desktop users are updated automatically)
+- Windows: `Sonixy-Connect-Setup-2.0.0.exe`, auto-updater `latest.yml`
+  - SHA-256: `D1A41287150CCEF0486BC5EF8A93027A3AC8C850B3B8A136D9E07F58A17F40F9`
+- Mac (universal: Intel & Apple silicon, macOS 12+): `Sonixy-Connect-2.0.0-mac.dmg`, built by the *Build Sonixy Connect for Mac* workflow
+  - SHA-256: `B53694F19E2EBB69C93821C60D7472BA736A03C0293D011110977A1D56106A48`
+
+### Release Notes
+
+Sonixy v1.4.0 brings Sonixy Connect, a new small app for Windows and Mac that plays your phone's Sonixy music through your computer.
+
+- **Sonixy Connect**: pair once (allow the phone on the PC, or scan a QR code), then it reconnects by itself on the same Wi-Fi. Choose on the phone whether it stays silent or plays too; if the PC drops, the music pauses. Fixes Windows Firewall with one admin prompt so it also works on Public networks. Phones need v1.4.0 to pair.
+- **More download sources**: YouTube Music, SoundCloud, Bandcamp, Deezer, Apple Music, Tidal, TikTok, Instagram, X, Facebook, Vimeo, Dailymotion, Twitch, Mixcloud and more; playlists and albums expand into full track lists.
+- **Redesigned downloader page** with real platform logos and a smooth scrolling platform row.
+- **Library fixes**: All Songs plays through your whole library, songs load right away after an update, artist pictures download for every artist, and images no longer flash.
+- **Removed** the old desktop extras (export to PC, lyrics on PC, Discord status).
+
 ## v1.3.1
 
 - File: `releases/sonixy-v1.3.1-release-signed.apk`

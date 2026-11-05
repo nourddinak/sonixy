@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary SEO Meta Tags -->
-    <title>Sonixy | High-Speed Spotify Music Downloader & Player for Android and Windows</title>
-    <meta name="title" content="Sonixy | High-Speed Spotify Music Downloader & Player for Android and Windows">
-    <meta name="description" content="Download Spotify tracks, playlists, and albums with synced timecoded lyrics. Enjoy zero-lag 60fps playback on Android and ambient desktop casting on Windows. 100% free, no ads, no account.">
+    <title>Sonixy | High-Speed Spotify Music Downloader & Player for Android, Windows and Mac</title>
+    <meta name="title" content="Sonixy | High-Speed Spotify Music Downloader & Player for Android, Windows and Mac">
+    <meta name="description" content="Download Spotify tracks, playlists, and albums with synced timecoded lyrics. Enjoy zero-lag 60fps playback on Android and play it through your PC or Mac with Sonixy Connect. 100% free, no ads, no account.">
     <meta name="keywords" content="Spotify music downloader, spotify to mp3, android music player, synced lyrics, lrc player, electron music player, sonixy, offline music player, high quality audio downloader">
     <meta name="robots" content="index, follow">
     <meta name="author" content="nourddinak">
@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://nourddinak.github.io/sonixy/">
     <meta property="og:site_name" content="Sonixy Music">
     <meta property="og:title" content="Sonixy | Your Music, Downloaded & Synced Everywhere">
-    <meta property="og:description" content="The ultimate free music ecosystem: High-speed Spotify downloader, timecoded synced lyrics, 60fps mobile player, and ambient Windows desktop companion.">
+    <meta property="og:description" content="The ultimate free music ecosystem: High-speed Spotify downloader, timecoded synced lyrics, 60fps mobile player, and Sonixy Connect for PC and Mac.">
     <meta property="og:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/.github/assets/social-preview.png">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nourddinak/sonixy/master/.github/assets/logo.png">
 
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://nourddinak.github.io/sonixy/">
     <meta name="twitter:title" content="Sonixy | High-Speed Spotify Music Downloader & Player">
-    <meta name="twitter:description" content="Download Spotify tracks, playlists & albums with real-time synced lyrics on Android & Windows. Zero ads, completely free, no account needed.">
+    <meta name="twitter:description" content="Download Spotify tracks, playlists & albums with real-time synced lyrics on Android, Windows & Mac. Zero ads, completely free, no account needed.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/.github/assets/social-preview.png">
 
     <!-- Google Search Structured Data (JSON-LD) -->
@@ -37,8 +37,8 @@
       "@type": "SoftwareApplication",
       "name": "Sonixy",
       "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Android, Windows 10, Windows 11",
-      "description": "Sonixy is a high-performance music downloader and ambient playback ecosystem for Android and Windows with synced timecoded lyrics.",
+      "operatingSystem": "Android, Windows 10, Windows 11, macOS",
+      "description": "Sonixy is a high-performance music downloader and ambient playback ecosystem for Android, Windows and Mac with synced timecoded lyrics.",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -50,7 +50,7 @@
         "url": "https://github.com/nourddinak"
       },
       "downloadUrl": "https://github.com/nourddinak/sonixy/releases/latest",
-      "softwareVersion": "1.3.1"
+      "softwareVersion": "1.4.0"
     }
     </script>
 
@@ -310,7 +310,7 @@
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
             width: 100%;
-            max-width: 820px;
+            max-width: 1120px;
             margin: 0 auto 5rem;
         }
 
@@ -728,19 +728,19 @@
         <section class="hero">
             <div class="badge-pill">
                 <span class="pulse-dot"></span>
-                <span id="hero-version-text">Sonixy v1.3.1 Live — Free • No Ads</span>
+                <span id="hero-version-text">Sonixy v1.4.0 Live — Free • No Ads</span>
             </div>
 
             <h1 class="hero-title">Your Music.<br>Downloaded, Synced, Everywhere.</h1>
             <p class="hero-subtitle">
-                The high-performance music ecosystem with Spotify link downloading, real-time timecoded lyrics, 60fps mobile playback, and seamless ambient Windows desktop streaming.
+                The high-performance music ecosystem with Spotify link downloading, real-time timecoded lyrics, 60fps mobile playback, and Sonixy Connect to play it all through your PC or Mac.
             </p>
 
             <!-- 1-Click Direct Download Cards -->
             <div class="downloads-grid" id="downloads">
                 <!-- Android Direct Download -->
                 <div class="dl-card">
-                    <span class="dl-card-badge" id="and-version-tag">v1.3.1</span>
+                    <span class="dl-card-badge" id="and-version-tag">v1.4.0</span>
                     <div class="dl-icon-container">
                         <svg viewBox="0 0 24 24">
                             <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.022 3.503c-1.4362-.6481-3.1399-1.0259-4.9922-1.0259-1.8527 0-3.5564.3778-4.9926 1.0259l-2.022-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.695 11.4552.2612 15.6542.115 20.6725h23.77c-.1462-5.0183-2.58-9.2173-6.0025-11.3511"/>
@@ -749,7 +749,7 @@
                     <h2>Android APK</h2>
                     <p>Fluid 60fps playback, zero-stutter now-playing overlay, synced lyrics, and offline storage.</p>
                     
-                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.3.1/sonixy-v1.3.1-release-signed.apk" id="direct-apk-btn" class="dl-btn" download>
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-v1.4.0-code12-release.apk" id="direct-apk-btn" class="dl-btn" download>
                         <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
                         </svg>
@@ -767,28 +767,55 @@
 
                 <!-- Windows Direct Download -->
                 <div class="dl-card">
-                    <span class="dl-card-badge" id="win-version-tag">v1.2.6</span>
+                    <span class="dl-card-badge" id="win-version-tag">v2.0.0</span>
                     <div class="dl-icon-container">
                         <svg viewBox="0 0 24 24">
                             <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/>
                         </svg>
                     </div>
-                    <h2>Windows Setup</h2>
-                    <p>Ambient desktop player, synced timecoded lyrics, local network casting, and auto-updates.</p>
-                    
-                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.3.1/Sonixy-Desktop-Setup-1.2.6.exe" id="direct-exe-btn" class="dl-btn" download>
+                    <h2>Sonixy Connect for Windows</h2>
+                    <p>Plays your phone's Sonixy music through your PC. Pair once, it reconnects by itself and updates itself.</p>
+
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-Setup-2.0.0.exe" id="direct-exe-btn" class="dl-btn" download>
                         <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
                         </svg>
                         <span>Download .exe</span>
                     </a>
-                    
+
                     <div class="dl-meta-info">
-                        <span>~106 MB</span>
+                        <span>~104 MB</span>
                         <span>•</span>
                         <span>Windows 10 / 11</span>
                         <span>•</span>
                         <span>Auto-Updates</span>
+                    </div>
+                </div>
+
+                <!-- Mac Direct Download -->
+                <div class="dl-card">
+                    <span class="dl-card-badge" id="mac-version-tag">v2.0.0</span>
+                    <div class="dl-icon-container">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M16.365 1.43c0 1.14-.42 2.23-1.25 3.04-.86.84-2.02 1.42-3.06 1.33-.13-1.1.42-2.27 1.2-3.05.86-.87 2.16-1.47 3.11-1.32zM20.5 17.24c-.55 1.27-.81 1.84-1.52 2.96-.99 1.56-2.39 3.5-4.12 3.52-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.33C-.03 16.04-.32 10.92 1.4 8.26 2.62 6.37 4.55 5.27 6.36 5.27c1.84 0 3 1.01 4.52 1.01 1.48 0 2.38-1.01 4.51-1.01 1.61 0 3.32.88 4.54 2.4-3.99 2.19-3.34 7.89.57 9.57z"/>
+                        </svg>
+                    </div>
+                    <h2>Sonixy Connect for Mac</h2>
+                    <p>The same Sonixy Connect for macOS. One download runs on both Intel and Apple silicon Macs.</p>
+
+                    <a href="https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-2.0.0-mac.dmg" id="direct-dmg-btn" class="dl-btn" download>
+                        <svg style="width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                        </svg>
+                        <span>Download .dmg</span>
+                    </a>
+
+                    <div class="dl-meta-info">
+                        <span id="mac-size">~218 MB</span>
+                        <span>•</span>
+                        <span>macOS 12+</span>
+                        <span>•</span>
+                        <span>Intel &amp; Apple silicon</span>
                     </div>
                 </div>
             </div>
@@ -798,7 +825,7 @@
         <section class="ecosystem-banner">
             <h2>Seamless Cross-Device Audio Ecosystem</h2>
             <p>
-                Sonixy connects your Android smartphone and Windows desktop seamlessly. Browse and trigger downloads on mobile, stream directly to your PC via mDNS casting, and control volume and track seek from anywhere in your room.
+                Sonixy connects your Android phone to your Windows PC or Mac. Download and play on the phone, and Sonixy Connect plays it through the computer over your Wi-Fi, with play, pause, skip and seek from either side.
             </p>
             <div class="ecosystem-pills">
                 <div class="eco-pill">Zero-Lag Architecture</div>
@@ -857,8 +884,8 @@
                             <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
                         </svg>
                     </div>
-                    <h3>Ambient Desktop Player</h3>
-                    <p>Immerse yourself on Windows with clean typography, lyric sidebar, hotkey controls, and automatic background updates from GitHub.</p>
+                    <h3>Sonixy Connect for PC &amp; Mac</h3>
+                    <p>Play your phone's music through your computer's speakers. Pair once, it reconnects on its own, and you choose whether the phone stays silent.</p>
                 </div>
 
                 <!-- Feature 5 -->
@@ -932,11 +959,35 @@
                         </li>
                         <li class="step-item">
                             <span class="step-num">2</span>
-                            <span>Run <code>Sonixy-Desktop-Setup-1.2.6.exe</code>. Setup completes automatically.</span>
+                            <span>Run <code>Sonixy-Connect-Setup-2.0.0.exe</code>. On first launch, allow the admin prompt once so your phone can reach the PC on any network.</span>
                         </li>
                         <li class="step-item">
                             <span class="step-num">3</span>
-                            <span>Launch Sonixy from your Desktop or Start Menu. Future updates apply in background!</span>
+                            <span>On your phone, open the player, tap the cast icon, pick your PC and click <strong>Allow</strong> on the PC. Updates install by themselves.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mac Guide -->
+                <div class="guide-card">
+                    <h3>
+                        <svg style="width: 22px; height: 22px; fill: #e4e4e7;" viewBox="0 0 24 24">
+                            <path d="M16.365 1.43c0 1.14-.42 2.23-1.25 3.04-.86.84-2.02 1.42-3.06 1.33-.13-1.1.42-2.27 1.2-3.05.86-.87 2.16-1.47 3.11-1.32zM20.5 17.24c-.55 1.27-.81 1.84-1.52 2.96-.99 1.56-2.39 3.5-4.12 3.52-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.33C-.03 16.04-.32 10.92 1.4 8.26 2.62 6.37 4.55 5.27 6.36 5.27c1.84 0 3 1.01 4.52 1.01 1.48 0 2.38-1.01 4.51-1.01 1.61 0 3.32.88 4.54 2.4-3.99 2.19-3.34 7.89.57 9.57z"/>
+                        </svg>
+                        Mac Setup
+                    </h3>
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <span class="step-num">1</span>
+                            <span>Click <strong>Download .dmg</strong>, open it and drag <strong>Sonixy Connect</strong> into Applications.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-num">2</span>
+                            <span>The app isn't notarized by Apple, so the first time macOS blocks it: open <em>System Settings → Privacy &amp; Security</em> and click <strong>Open Anyway</strong>. Then allow <em>Local Network</em> access.</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-num">3</span>
+                            <span>Pair from your phone like on Windows. For new versions, download the latest .dmg from this page.</span>
                         </li>
                     </ul>
                 </div>
@@ -979,8 +1030,8 @@
                 const relRes = await fetch('https://api.github.com/repos/nourddinak/sonixy/releases/latest');
                 if (relRes.ok) {
                     const relData = await relRes.json();
-                    const tag = relData.tag_name || 'v1.3.1';
-                    
+                    const tag = relData.tag_name || 'v1.4.0';
+
                     document.getElementById('hero-version-text').textContent = `Sonixy ${tag} Live — Free • No Ads`;
                     document.getElementById('and-version-tag').textContent = tag;
 
@@ -989,9 +1040,19 @@
                         document.getElementById('direct-apk-btn').href = apkAsset.browser_download_url;
                     }
 
-                    const exeAsset = relData.assets.find(a => a.name.endsWith('.exe'));
+                    // Sonixy Connect files carry their own version in the name, e.g. Sonixy-Connect-Setup-2.0.0.exe
+                    const connectVersion = (name) => (name.match(/(\d+\.\d+\.\d+)/) || [])[1];
+                    const exeAsset = relData.assets.find(a => /^Sonixy-Connect-Setup-.*\.exe$/.test(a.name));
                     if (exeAsset) {
                         document.getElementById('direct-exe-btn').href = exeAsset.browser_download_url;
+                        document.getElementById('win-version-tag').textContent = `v${connectVersion(exeAsset.name)}`;
+                    }
+
+                    const dmgAsset = relData.assets.find(a => a.name.endsWith('.dmg'));
+                    if (dmgAsset) {
+                        document.getElementById('direct-dmg-btn').href = dmgAsset.browser_download_url;
+                        document.getElementById('mac-version-tag').textContent = `v${connectVersion(dmgAsset.name)}`;
+                        document.getElementById('mac-size').textContent = `~${Math.round(dmgAsset.size / 1e6)} MB`;
                     }
                 }
             } catch (err) {

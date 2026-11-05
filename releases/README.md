@@ -4,6 +4,7 @@ This folder contains downloadable Sonixy APK releases.
 
 ## Files
 
+- `Sonixy-v1.4.0-code12-release.apk` (on the [v1.4.0 release](https://github.com/nourddinak/sonixy/releases/tag/v1.4.0))
 - `sonixy-v1.3.1-release-signed.apk`
 - `sonixy-v1.3.0-release-signed.apk`
 - `sonixy-v1.2.6-release-signed.apk`
@@ -16,6 +17,14 @@ This folder contains downloadable Sonixy APK releases.
 - `sonixy-v1.1-release-signed.apk`
 - `sonixy-v1.0-release-signed.apk`
 
+
+### Sonixy-v1.4.0-code12-release.apk
+
+SHA-256:
+
+```text
+232BFC5D838A85577062CA16A8CB135847588501AD7EC288BDC27092D723CA4A
+```
 
 ### sonixy-v1.3.1-release-signed.apk
 
