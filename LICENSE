@@ -1,12 +1,48 @@
-Proprietary License
+Sonixy Freeware License
 
 Copyright (c) 2026 nourddinak. All rights reserved.
 
-Sonixy is closed-source proprietary software.
+Sonixy ("the Software") is freeware. It is free of charge but closed source.
+This license covers the Sonixy Android app, the Sonixy Desktop app, and the
+files published in this repository and on its Releases page.
 
-No permission is granted to copy, modify, publish, distribute, sublicense, sell,
-reverse engineer, or reuse this software or its related materials unless the
-owner gives explicit written permission.
+1. Permission to use
+   You may download, install and use the Software free of charge, for
+   personal, non-commercial use, on any number of your own devices.
 
-The APK in this repository is provided only for installation and testing by
-authorized users. It does not include or grant rights to the source code.
+2. Restrictions
+   Without prior written permission from the copyright holder, you may not:
+   a. sell, rent, lease or charge any fee for the Software;
+   b. redistribute, re-upload or mirror the Software or its installers
+      (APK, AAB, EXE). Share a link to the official Releases page instead;
+   c. modify, reverse engineer, decompile or disassemble the Software, except
+      where applicable law expressly allows it;
+   d. bundle the Software with other software, or publish modified versions;
+   e. remove or alter any copyright notice, name or logo.
+
+3. Ownership
+   The Software, its name, logo and artwork remain the property of the
+   copyright holder. This license grants no rights to the source code and no
+   trademark rights.
+
+4. Your use of third-party content
+   You are solely responsible for what you download with the Software and
+   for following copyright law and the terms of service of any third-party
+   platform. The Software is not affiliated with or endorsed by any of them.
+
+5. No warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+6. Limitation of liability
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR
+   OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+   ITS USE.
+
+7. Termination
+   This license ends automatically if you break any of its terms. You must
+   then stop using the Software and delete all copies.
+
+For permissions beyond this license, contact the author through
+https://github.com/nourddinak.

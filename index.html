@@ -7,7 +7,7 @@
     <!-- Primary SEO Meta Tags -->
     <title>Sonixy | High-Speed Spotify Music Downloader & Player for Android and Windows</title>
     <meta name="title" content="Sonixy | High-Speed Spotify Music Downloader & Player for Android and Windows">
-    <meta name="description" content="Download Spotify tracks, playlists, and albums with synced timecoded lyrics. Enjoy zero-lag 60fps playback on Android and ambient desktop casting on Windows. 100% Free & Open Source.">
+    <meta name="description" content="Download Spotify tracks, playlists, and albums with synced timecoded lyrics. Enjoy zero-lag 60fps playback on Android and ambient desktop casting on Windows. 100% free, no ads, no account.">
     <meta name="keywords" content="Spotify music downloader, spotify to mp3, android music player, synced lyrics, lrc player, electron music player, sonixy, offline music player, high quality audio downloader">
     <meta name="robots" content="index, follow">
     <meta name="author" content="nourddinak">
@@ -20,14 +20,15 @@
     <meta property="og:site_name" content="Sonixy Music">
     <meta property="og:title" content="Sonixy | Your Music, Downloaded & Synced Everywhere">
     <meta property="og:description" content="The ultimate free music ecosystem: High-speed Spotify downloader, timecoded synced lyrics, 60fps mobile player, and ambient Windows desktop companion.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/sonixy-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/.github/assets/social-preview.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nourddinak/sonixy/master/.github/assets/logo.png">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://nourddinak.github.io/sonixy/">
     <meta name="twitter:title" content="Sonixy | High-Speed Spotify Music Downloader & Player">
-    <meta name="twitter:description" content="Download Spotify tracks, playlists & albums with real-time synced lyrics on Android & Windows. Zero ads, completely free & open source.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/sonixy-android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
+    <meta name="twitter:description" content="Download Spotify tracks, playlists & albums with real-time synced lyrics on Android & Windows. Zero ads, completely free, no account needed.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/nourddinak/sonixy/master/.github/assets/social-preview.png">
 
     <!-- Google Search Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -727,7 +728,7 @@
         <section class="hero">
             <div class="badge-pill">
                 <span class="pulse-dot"></span>
-                <span id="hero-version-text">Sonixy v1.3.1 Live — Free & Open Source</span>
+                <span id="hero-version-text">Sonixy v1.3.1 Live — Free • No Ads</span>
             </div>
 
             <h1 class="hero-title">Your Music.<br>Downloaded, Synced, Everywhere.</h1>
@@ -947,7 +948,7 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <span class="footer-logo">Sonixy</span>
-                    <span class="footer-copy">Crafted with ❤️ by nourddinak. Open-Source under MIT License.</span>
+                    <span class="footer-copy">Crafted with ❤️ by nourddinak. Freeware. All rights reserved.</span>
                 </div>
 
                 <ul class="footer-links">
@@ -980,7 +981,7 @@
                     const relData = await relRes.json();
                     const tag = relData.tag_name || 'v1.3.1';
                     
-                    document.getElementById('hero-version-text').textContent = `Sonixy ${tag} Live — Free & Open Source`;
+                    document.getElementById('hero-version-text').textContent = `Sonixy ${tag} Live — Free • No Ads`;
                     document.getElementById('and-version-tag').textContent = tag;
 
                     const apkAsset = relData.assets.find(a => a.name.endsWith('.apk'));
