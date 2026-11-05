@@ -1,0 +1,102 @@
+# Builds Sonixy Connect for Mac from the Windows installer that's already in a release, then attaches the .dmg to it.
+# No source code lives in this repo: Sonixy Connect is plain JavaScript, so the app bundle (app.asar) inside the
+# Windows installer is the whole app, and electron-builder can package that same bundle for macOS.
+name: Build Sonixy Connect for Mac
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to build from (the Mac app is attached to the same release)
+        required: true
+        default: v1.4.0
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mac-${{ github.event.release.tag_name || inputs.tag }}
+
+jobs:
+  mac:
+    runs-on: macos-14
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      # Keep equal to the "electron" devDependency of the desktop app.
+      ELECTRON_VERSION: 42.2.0
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Find the Windows installer in the release
+        id: find
+        run: |
+          exe=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' \
+            | grep -E '^Sonixy-Connect-Setup-[0-9]+\.[0-9]+\.[0-9]+\.exe$' | head -n1 || true)
+          if [ -z "$exe" ]; then
+            echo "No Sonixy Connect installer in $TAG, nothing to build."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          version="${exe#Sonixy-Connect-Setup-}"
+          echo "exe=$exe" >> "$GITHUB_OUTPUT"
+          echo "version=${version%.exe}" >> "$GITHUB_OUTPUT"
+
+      - name: Unpack the app from the installer
+        if: steps.find.outputs.skip != 'true'
+        run: |
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "${{ steps.find.outputs.exe }}" --dir dl
+          mkdir tools
+          (cd tools && npm init -y >/dev/null && npm install --no-audit --no-fund 7zip-bin@5.2.0 @electron/asar@3.2.17 >/dev/null)
+          za=$(node -p "require('./tools/node_modules/7zip-bin').path7za")
+          chmod +x "$za"
+          "$za" x "dl/${{ steps.find.outputs.exe }}" -owin -y >/dev/null
+          node tools/node_modules/@electron/asar/bin/asar.js extract win/resources/app.asar app
+          test -f app/electron/main.js
+          node -e "const p=require('./app/package.json'); if (p.version !== '${{ steps.find.outputs.version }}') { console.error('version mismatch', p.version); process.exit(1) }"
+
+      - name: Build the Mac app
+        if: steps.find.outputs.skip != 'true'
+        working-directory: app
+        run: |
+          npm install --omit=dev --no-audit --no-fund
+          cat > ../builder.json <<EOF
+          {
+            "appId": "com.sonixy.desktop",
+            "productName": "Sonixy Connect",
+            "electronVersion": "$ELECTRON_VERSION",
+            "npmRebuild": false,
+            "directories": { "output": "../out" },
+            "mac": {
+              "icon": "src/assets/logo.png",
+              "category": "public.app-category.music",
+              "target": [{ "target": "dmg", "arch": ["universal"] }],
+              "artifactName": "Sonixy-Connect-\${version}-mac.\${ext}",
+              "identity": "-",
+              "hardenedRuntime": false,
+              "extendInfo": {
+                "NSLocalNetworkUsageDescription": "Sonixy Connect finds your phone on the same Wi-Fi and plays its music.",
+                "NSBonjourServices": ["_sonixy._tcp", "_sonixymobile._tcp"]
+              }
+            },
+            "dmg": { "title": "Sonixy Connect" },
+            "publish": null
+          }
+          EOF
+          npx -y electron-builder@26.8.1 --mac --projectDir . --config ../builder.json --publish never
+
+      - name: Check the app is signed (ad-hoc) and runs on Intel and Apple silicon
+        if: steps.find.outputs.skip != 'true'
+        run: |
+          app=$(ls -d out/mac-universal/*.app)
+          codesign --verify --deep --strict "$app"
+          codesign -dv "$app" 2>&1 | grep -E 'Signature|Identifier'
+          lipo -archs "$app/Contents/MacOS/Sonixy Connect"
+
+      - name: Attach to the release
+        if: steps.find.outputs.skip != 'true'
+        run: gh release upload "$TAG" out/Sonixy-Connect-*-mac.dmg --repo "$GITHUB_REPOSITORY" --clobber
