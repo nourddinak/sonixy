@@ -38,8 +38,8 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 
 | Platform | Version | Size | Download |
 | :--- | :---: | :---: | :--- |
-| **Android** (7.0+) | **v1.4.0** | ~39.8 MB | [**Sonixy-v1.4.0-code12-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-v1.4.0-code12-release.apk) |
-| **Windows** (10 / 11): Sonixy Connect | **v2.0.0** | ~104.3 MB | [**Sonixy-Connect-Setup-2.0.0.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-Setup-2.0.0.exe) |
+| **Android** (7.0+) | **v1.4.1** | ~37.3 MB | [**Sonixy-v1.4.1-code13-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-v1.4.1-code13-release.apk) |
+| **Windows** (10 / 11): Sonixy Connect | **v2.0.1** | ~100.7 MB | [**Sonixy-Connect-Setup-2.0.1.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-Connect-Setup-2.0.1.exe) |
 | **macOS** (12+, Intel & Apple silicon): Sonixy Connect | **v2.0.0** | ~218.3 MB | [**Sonixy-Connect-2.0.0-mac.dmg**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-2.0.0-mac.dmg) |
 
 > Only download Sonixy from this repository's [Releases page](https://github.com/nourddinak/sonixy/releases) or the [official website](https://nourddinak.github.io/sonixy/). Check the SHA-256 hashes [below](#-verify-your-download).
@@ -86,7 +86,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details open>
 <summary><b>Android</b></summary>
 
-1. Download [**`Sonixy-v1.4.0-code12-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-v1.4.0-code12-release.apk).
+1. Download [**`Sonixy-v1.4.1-code13-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-v1.4.1-code13-release.apk).
 2. Open the file from your notifications or file manager.
 3. Allow **"Install unknown apps"** if Android asks.
 4. Open Sonixy, paste a link, and press download.
@@ -96,7 +96,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details>
 <summary><b>Windows</b></summary>
 
-1. Download [**`Sonixy-Connect-Setup-2.0.0.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-Setup-2.0.0.exe).
+1. Download [**`Sonixy-Connect-Setup-2.0.1.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-Connect-Setup-2.0.1.exe).
 2. Run the installer. On first launch, allow the admin prompt once so your phone can reach the PC on any network.
 3. On your phone, open the player, tap the cast icon, pick your PC and click **Allow** on the PC.
 4. Updates install automatically from then on.
@@ -118,15 +118,15 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 ## 🔐 Verify your download
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.0-code12-release.apk
+Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.1-code13-release.apk
 ```
 
 On a Mac: `shasum -a 256 Sonixy-Connect-2.0.0-mac.dmg`
 
 | File | SHA-256 |
 | :--- | :--- |
-| `Sonixy-v1.4.0-code12-release.apk` | `232BFC5D838A85577062CA16A8CB135847588501AD7EC288BDC27092D723CA4A` |
-| `Sonixy-Connect-Setup-2.0.0.exe` | `D1A41287150CCEF0486BC5EF8A93027A3AC8C850B3B8A136D9E07F58A17F40F9` |
+| `Sonixy-v1.4.1-code13-release.apk` | `5D1097D9E60F2C9B0E7BB0A9169BF6CD9838B4DA39C87E4DCEC32C4A96C9A148` |
+| `Sonixy-Connect-Setup-2.0.1.exe` | `D6BB45119594EC6A119D4ACD79C431E628CC7BF10077EDFD7CF6377BE42EE275` |
 | `Sonixy-Connect-2.0.0-mac.dmg` | `B53694F19E2EBB69C93821C60D7472BA736A03C0293D011110977A1D56106A48` |
 
 Hashes for older versions are in [`releases/README.md`](releases/README.md).

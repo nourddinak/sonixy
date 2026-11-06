@@ -1,5 +1,25 @@
 # Sonixy Releases
 
+## v1.4.1
+
+- File: `Sonixy-v1.4.1-code13-release.apk` (also `Sonixy-v1.4.1-code13-release.aab`)
+- Version name: `1.4.1`
+- Version code: `13`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `5D1097D9E60F2C9B0E7BB0A9169BF6CD9838B4DA39C87E4DCEC32C4A96C9A148`
+
+**Sonixy Connect 2.0.1** (Companion for Windows and Mac)
+- Windows: `Sonixy-Connect-Setup-2.0.1.exe`, auto-updater `latest.yml`
+  - SHA-256: `D6BB45119594EC6A119D4ACD79C431E628CC7BF10077EDFD7CF6377BE42EE275`
+
+### Release Notes
+
+Sonixy v1.4.1 introduces automatic offline mode detection, fluid swipe-down-to-refresh across the music library, and a redesigned desktop interface for Sonixy Connect matching the mobile app's frosted glass aesthetic.
+
+- **Auto Offline Mode**: When Wi-Fi and cellular connections drop, Sonixy automatically transitions to offline mode, moves you to your local library, and disables network-bound operations. When connectivity returns, the app seamlessly restores full online features and returns you to Home.
+- **Library Swipe-Down-To-Refresh**: Added spring-physics pull-to-refresh across all library tabs (Playlists, Songs, Artists, Favorites) and playlist/artist detail screens. Non-passive touch interception guarantees smooth gesture tracking without browser interruption, complete with haptic feedback.
+- **Redesigned Sonixy Connect 2.0.1 (Desktop)**: Brand-new companion interface styled with Sonixy's signature frosted glass, matching soft 3D phone artwork, animated album art backdrop blur, custom progress & volume sliders, and cleaner pairing instructions.
+
 ## v1.4.0
 
 - File: `Sonixy-v1.4.0-code12-release.apk` (also `Sonixy-v1.4.0-code12-release.aab`)
