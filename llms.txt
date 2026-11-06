@@ -1,0 +1,30 @@
+# Sonixy
+
+> Sonixy is a free music downloader and offline player for Android, with Sonixy Connect companion apps for Windows and macOS.
+
+## Official website
+
+- Homepage: https://nourddinak.github.io/sonixy/
+- Download and installation guide: https://nourddinak.github.io/sonixy/downloads/
+- Official releases: https://github.com/nourddinak/sonixy/releases/latest
+- Repository: https://github.com/nourddinak/sonixy
+- Changelog: https://github.com/nourddinak/sonixy/blob/master/RELEASES.md
+
+## Product summary
+
+Sonixy is an Android music player and downloader. Its website says users can paste supported music and media links to find tracks, organize/tag audio with artwork, and use synced lyrics and offline playback. Sonixy Connect lets users play phone audio through a paired Windows PC or Mac on the local network.
+
+The project lists Spotify, YouTube Music, SoundCloud, Bandcamp, Deezer, Apple Music, Tidal, Mixcloud, YouTube, TikTok, Instagram, X, Facebook, Vimeo, Dailymotion, and Twitch among supported sources. Source support may change; consult the official README and current release notes.
+
+## Downloads and compatibility
+
+Use the official Releases page for current installers and version information. The project README currently describes Android 7.0+, Windows 10/11, and macOS 12+ support. Verify the SHA-256 checksums published in the README before installing.
+
+## Important notes
+
+Sonixy is freeware and is not affiliated with Spotify or other listed media platforms. Users are responsible for following applicable laws and each service's terms. Only download content they are authorized to use. The project states its application source code is closed source; see the repository LICENSE for terms.
+
+## More information
+
+- Frequently asked questions and install steps: https://nourddinak.github.io/sonixy/downloads/
+- Full feature, compatibility, security-checksum, and disclaimer details: https://github.com/nourddinak/sonixy/blob/master/README.md
