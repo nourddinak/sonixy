@@ -24,11 +24,12 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 
 <br/>
 
-<img src=".github/assets/screenshots/downloader.jpg" alt="Downloader" width="19%" />
-<img src=".github/assets/screenshots/library.jpg" alt="Library" width="19%" />
-<img src=".github/assets/screenshots/player.jpg" alt="Player" width="19%" />
-<img src=".github/assets/screenshots/drive-mode.jpg" alt="Drive Mode" width="19%" />
-<img src=".github/assets/screenshots/desktop-sync.jpg" alt="Desktop sync" width="19%" />
+<img src=".github/assets/screenshots/downloader.jpg" alt="Downloader" width="16%" />
+<img src=".github/assets/screenshots/library.jpg" alt="Library" width="16%" />
+<img src=".github/assets/screenshots/player.jpg" alt="Player" width="16%" />
+<img src=".github/assets/screenshots/drive-mode.jpg" alt="Drive Mode" width="16%" />
+<img src=".github/assets/screenshots/desktop-sync.jpg" alt="Desktop sync" width="16%" />
+<img src=".github/assets/screenshots/settings.jpg" alt="Settings" width="16%" />
 
 </div>
 
@@ -56,9 +57,9 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 
 ## 🌍 Supported sources
 
-| Music | Video & social | Anything else |
-| :--- | :--- | :--- |
-| Spotify · YouTube Music · SoundCloud · Bandcamp · Deezer · Apple Music · Tidal · Mixcloud | YouTube · TikTok · Instagram · X (Twitter) · Facebook · Vimeo · Dailymotion · Twitch | Any **web link** supported by `yt-dlp` |
+| Music |
+| :--- |
+| Spotify · YouTube Music · SoundCloud · Bandcamp · Deezer · Apple Music · Tidal · Mixcloud |
 
 ## 🚀 Features
 
