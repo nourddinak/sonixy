@@ -39,9 +39,9 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 
 | Platform | Version | Size | Download |
 | :--- | :---: | :---: | :--- |
-| **Android** (7.0+) | **v1.4.1** | ~37.3 MB | [**Sonixy-v1.4.1-code13-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-v1.4.1-code13-release.apk) |
-| **Windows** (10 / 11): Sonixy Connect | **v2.0.1** | ~100.7 MB | [**Sonixy-Connect-Setup-2.0.1.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-Connect-Setup-2.0.1.exe) |
-| **macOS** (12+, Intel & Apple silicon): Sonixy Connect | **v2.0.0** | ~218.3 MB | [**Sonixy-Connect-2.0.0-mac.dmg**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-2.0.0-mac.dmg) |
+| **Android** (7.0+) | **v1.4.6** | ~37.3 MB | [**Sonixy-v1.4.6-code18-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.6/Sonixy-v1.4.6-code18-release.apk) |
+| **Windows** (10 / 11): Sonixy Connect | **v2.0.2** | ~100.7 MB | [**Sonixy-Connect-Setup-2.0.2.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.6/Sonixy-Connect-Setup-2.0.2.exe) |
+| **macOS** (12+, Intel & Apple silicon): Sonixy Connect | **v2.0.2** | ~210.1 MB | [**Sonixy-Connect-2.0.2-mac.dmg**](https://github.com/nourddinak/sonixy/releases/download/v1.4.6/Sonixy-Connect-2.0.2-mac.dmg) |
 
 > Only download Sonixy from this repository's [Releases page](https://github.com/nourddinak/sonixy/releases) or the [official website](https://nourddinak.github.io/sonixy/). Check the SHA-256 hashes [below](#-verify-your-download).
 
@@ -71,6 +71,8 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 - Smooth 60 fps Jetpack Compose UI with a swipe-to-dismiss full-screen player.
 - Library tabs for **Folders, Artists, Albums and Playlists**, with batch move, delete and search.
 - 🚗 **Drive Mode**: a high-contrast AMOLED in-car screen with big 80 dp touch targets and swipe-to-skip.
+- 🎬 **Music videos**: optionally save a song's official music video (VP9, small files) and watch it in the player, synced to the music.
+- 🎚️ **Crossfade** up to 30 seconds, gapless playback, and a pause when headphones come out.
 - ⏱️ **Sleep timer**, Reels-style music video feed, and an in-app feedback hub.
 
 ### Sonixy Connect (Windows & Mac)
@@ -78,6 +80,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 - 📡 Pair once over Wi-Fi (or scan a QR code); after that it reconnects by itself.
 - 📱 Choose on the phone whether it stays silent or plays too. If the PC drops, the music pauses.
 - 🛡️ Fixes Windows Firewall for you with one admin prompt, so it works on Public networks too.
+- 🖼️ Album art that fades softly into a glow of its own colours.
 - Automatic updates on Windows.
 
 ---
@@ -87,7 +90,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details open>
 <summary><b>Android</b></summary>
 
-1. Download [**`Sonixy-v1.4.1-code13-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-v1.4.1-code13-release.apk).
+1. Download [**`Sonixy-v1.4.6-code18-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.6/Sonixy-v1.4.6-code18-release.apk).
 2. Open the file from your notifications or file manager.
 3. Allow **"Install unknown apps"** if Android asks.
 4. Open Sonixy, paste a link, and press download.
@@ -97,7 +100,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details>
 <summary><b>Windows</b></summary>
 
-1. Download [**`Sonixy-Connect-Setup-2.0.1.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.1/Sonixy-Connect-Setup-2.0.1.exe).
+1. Download [**`Sonixy-Connect-Setup-2.0.2.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.6/Sonixy-Connect-Setup-2.0.2.exe).
 2. Run the installer. On first launch, allow the admin prompt once so your phone can reach the PC on any network.
 3. On your phone, open the player, tap the cast icon, pick your PC and click **Allow** on the PC.
 4. Updates install automatically from then on.
@@ -107,7 +110,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details>
 <summary><b>Mac</b></summary>
 
-1. Download [**`Sonixy-Connect-2.0.0-mac.dmg`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.0/Sonixy-Connect-2.0.0-mac.dmg) (one file for Intel and Apple silicon).
+1. Download [**`Sonixy-Connect-2.0.2-mac.dmg`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.6/Sonixy-Connect-2.0.2-mac.dmg) (one file for Intel and Apple silicon).
 2. Open it and drag **Sonixy Connect** into Applications.
 3. The app isn't notarized by Apple, so macOS blocks the first launch: open **System Settings → Privacy & Security** and click **Open Anyway**. Then allow **Local Network** access.
 4. Pair from your phone like on Windows. The Mac version doesn't update itself; download new versions from the Releases page.
@@ -119,16 +122,16 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 ## 🔐 Verify your download
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.1-code13-release.apk
+Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.6-code18-release.apk
 ```
 
-On a Mac: `shasum -a 256 Sonixy-Connect-2.0.0-mac.dmg`
+On a Mac: `shasum -a 256 Sonixy-Connect-2.0.2-mac.dmg`
 
 | File | SHA-256 |
 | :--- | :--- |
-| `Sonixy-v1.4.1-code13-release.apk` | `5D1097D9E60F2C9B0E7BB0A9169BF6CD9838B4DA39C87E4DCEC32C4A96C9A148` |
-| `Sonixy-Connect-Setup-2.0.1.exe` | `D6BB45119594EC6A119D4ACD79C431E628CC7BF10077EDFD7CF6377BE42EE275` |
-| `Sonixy-Connect-2.0.0-mac.dmg` | `B53694F19E2EBB69C93821C60D7472BA736A03C0293D011110977A1D56106A48` |
+| `Sonixy-v1.4.6-code18-release.apk` | `9215567964FC8B39BED95EF2F9DE2321E8BDB50FC11D5C99D886CA8EAA7A20F8` |
+| `Sonixy-Connect-Setup-2.0.2.exe` | `A7BD56587AFB423B117B43120EE88451490CF12DD3AF8F6D0341A784EEB3E755` |
+| `Sonixy-Connect-2.0.2-mac.dmg` | `FFBA0B1005A9F0DFACE2A70BB77E98A0467EB269269D29B3BCDBC84906506F69` |
 
 Hashes for older versions are in [`releases/README.md`](releases/README.md).
 

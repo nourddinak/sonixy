@@ -1,5 +1,41 @@
 # Sonixy Releases
 
+## v1.4.6
+
+- File: `Sonixy-v1.4.6-code18-release.apk` (also `Sonixy-v1.4.6-code18-release.aab`)
+- Version name: `1.4.6`
+- Version code: `18`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `9215567964FC8B39BED95EF2F9DE2321E8BDB50FC11D5C99D886CA8EAA7A20F8`
+- AAB SHA-256: `1CF1F413021E40A8F178BEA1524CAE1BA37DEDD492E268D24E04A610A4514D88`
+
+**Sonixy Connect 2.0.2** (Companion for Windows and Mac)
+- Windows: `Sonixy-Connect-Setup-2.0.2.exe`, auto-updater `latest.yml`
+  - SHA-256: `A7BD56587AFB423B117B43120EE88451490CF12DD3AF8F6D0341A784EEB3E755`
+- Mac (universal: Intel & Apple silicon, macOS 12+): `Sonixy-Connect-2.0.2-mac.dmg`
+  - SHA-256: `FFBA0B1005A9F0DFACE2A70BB77E98A0467EB269269D29B3BCDBC84906506F69`
+
+### Release Notes
+
+- **Show music videos switch**: Settings → Playback. Off shows the cover in the player; saved videos are kept.
+- **Crossfade up to 30 seconds**, never more than a third of a song so short tracks don't fade out right away.
+- **Smoother player and library**: the idle player and queue went from 11–15% to about 1% slow frames on a mid-range phone; Artists, Albums and Playlists open faster.
+- **Older phones and Android versions**: song details read correctly on Android 7–9, screens keep their size on older system WebViews, and music videos download as H.264 on phones without hardware VP9.
+- **Sonixy Connect 2.0.2**: album art fades softly into a glow of its own colours instead of a card; the desktop widget was removed.
+
+## v1.4.5
+
+- File: `Sonixy-v1.4.5-code17-release.apk` (also `Sonixy-v1.4.5-code17-release.aab`)
+- Version name: `1.4.5`
+- Version code: `17`
+
+### Release Notes
+
+- **Music videos**: optionally save a song's official music video (VP9, H.264 fallback; never fan uploads) and play it full-screen behind the player, synced to the music, with a glow in the video's own colours.
+- **Music video switch on Home**, quality in Settings, and video progress in the download list.
+- **Update alerts**: Sonixy checks for a new version about twice a day and notifies you.
+- **Live Updates**: on Android 16 phones that support it, the download notification can show as a status-bar chip.
+
 ## v1.4.1
 
 - File: `Sonixy-v1.4.1-code13-release.apk` (also `Sonixy-v1.4.1-code13-release.aab`)
