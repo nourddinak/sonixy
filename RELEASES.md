@@ -9,18 +9,19 @@
 - SHA-256: `032B302EBA5C58FB8CD1246B2564A66FCEF1D5EE93F078F28AAE77A44CC32A36`
 - AAB SHA-256: `64401B40CD84D935EE286A2E1121432632891A78206B258A4CCEC96A217CEBBC`
 
-**Sonixy Connect 2.0.3** (Companion for Windows and Mac)
-- Windows: `Sonixy-Connect-Setup-2.0.3.exe`, auto-updater `latest.yml`
-  - SHA-256: `A73A8E90BB8A02AA3467BB2DEBF2621F4CCC3493390F8679CC70F06181E96E70`
-- Mac (universal: Intel & Apple silicon, macOS 12+): `Sonixy-Connect-2.0.3-mac.dmg`
-  - SHA-256: `C5A5FC9A5E589248A53A4D0698A1B7E6F9000D8ADD1BE4E183812C224BFCC1BC`
+**Sonixy Connect 2.0.4** (Companion for Windows and Mac)
+- Windows: `Sonixy-Connect-Setup-2.0.4.exe`, auto-updater `latest.yml`
+  - SHA-256: `F692ACE93BE089410063A2B0A3F3AB91DEC9BA77CD088B9992B6EF0676AED2B6`
+- Mac (universal: Intel & Apple silicon, macOS 12+): `Sonixy-Connect-2.0.4-mac.dmg`
+  - SHA-256: `A502CE4CDDEFC15EA7F35B5670CADC93DD96470CC771CA0F275181774BF63527`
 
 ### Release Notes
 
 - **Updates you can see (Connect)**: a banner shows the download, then *Update ready → Restart* installs it. Before, updates downloaded but only installed when the app fully quit, which rarely happens since closing hides it to the tray. Mac shows when a new version is out and opens the download.
 - **Settings (Connect)**: *Start with Windows* / *Open at login*, version and *Check for updates*.
 - **New port 56481 (Connect)** instead of 8000, which other apps often use. The phone (v1.4.7) uses it for typed addresses without a port; discovery and QR codes always carry the real port.
-- Users on Connect 2.0.2 or older get 2.0.3 the next time the app fully quits (tray → Quit, or a PC restart).
+- **Start with Windows switch fixed (Connect 2.0.4)**: turning it on worked, but the switch flipped back to off, so it looked broken. It now shows the real state, and turning it off removes the startup entry.
+- Users on Connect 2.0.2 or older get the update the next time the app fully quits (tray → Quit, or a PC restart).
 
 ## v1.4.6
 
