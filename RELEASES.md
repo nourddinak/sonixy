@@ -1,5 +1,32 @@
 # Sonixy Releases
 
+## v1.4.8
+
+- File: `Sonixy-v1.4.8-code20-release.apk` (also `Sonixy-v1.4.8-code20-release.aab`)
+- Version name: `1.4.8`
+- Version code: `20`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `4BADAB8DCE4931500720358D30E917FE5C3AE53FDB99A56CD9D1EEF91E401C81`
+- AAB SHA-256: `749A467C62EDC32E9BAA7A001FE9292B94858362E7BF0D90422F1A2D1CBFEC57`
+
+**Sonixy Connect 2.0.5** (Companion for Windows and Mac)
+- Windows: `Sonixy-Connect-Setup-2.0.5.exe`, auto-updater `latest.yml`
+  - SHA-256: `EC5BB9E081752D3677DE3A790BD6F4D3650D781FC0937571FA45BBC431A952F9`
+- Mac (universal: Intel & Apple silicon, macOS 12+): `Sonixy-Connect-2.0.5-mac.dmg`
+  - SHA-256: `77767D76D67E8DD8B3485AE29ABFEB54E5D1AD0768FAEAD1EAA57A7F686D808E`
+
+### Release Notes
+
+- **Downloads keep going**: a short internet drop (or Wi-Fi napping with the screen off) no longer stops the playlist. Downloads wait and carry on right where they were, instead of getting stuck at "No internet • Paused".
+- **Runs in the background**: the first download asks once to run in the background, so phones with their own battery savers (TECNO, Infinix, Xiaomi…) don't freeze downloads with the screen off.
+- **Live download speed** on the download card.
+- **Download waits for the list**: after pasting a playlist or album, *Download* unlocks once all its songs are loaded.
+- **Deleting a playlist removes its folder** too, with its leftover lyrics.
+- **Update prompt shows what's new** from the GitHub release.
+- **No intro after updates**: the welcome screens only show on a new install.
+- **Network settings**: just *Wi-Fi only* and *Offline mode*.
+- **Crossfade on the PC (Connect 2.0.5)**: Sonixy Connect fades songs into each other like the phone does, instead of cutting the last song off up to 30 s early. Needs phone v1.4.8.
+
 ## v1.4.7
 
 - File: `Sonixy-v1.4.7-code19-release.apk` (also `Sonixy-v1.4.7-code19-release.aab`)
