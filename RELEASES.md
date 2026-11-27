@@ -1,5 +1,23 @@
 # Sonixy Releases
 
+## v1.4.9
+
+- File: `Sonixy-v1.4.9-code21-release.apk` (also `Sonixy-v1.4.9-code21-release.aab`)
+- Version name: `1.4.9`
+- Version code: `21`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `9D4900A6F165D98F7BF3D31E68E86A3119E3551ED266138D8AEF728A3BFB2F9A`
+- AAB SHA-256: `C99791F32B40E6CD92561468AB2F15FBF06FB867660F3FB3A8FC08EB074CB178`
+
+**Sonixy Connect 2.0.5** is unchanged and attached to this release too (see v1.4.8 for its checksums).
+
+### Release Notes
+
+- **Music videos download in seconds**: the plain video file over 8 connections instead of YouTube's HLS copy, which came down in ~40 small pieces one after another at 200–500 KB/s and held up the rest of the playlist. Often smaller at the same 1080p quality.
+- **No more waiting in "Finalizing"**: the lyrics search stops at its time limit instead of waiting for every lyrics site (up to 25 s each).
+- **Less overhead**: connections are reused instead of reopened for each piece of a song, the engine no longer rewrites its log file for every line or floods the system log with progress lines, and a playlist's song info is kept for the whole download.
+- **Lyrics for YouTube / SoundCloud links**: the best lyrics guess for direct links always failed; fixed.
+
 ## v1.4.8
 
 - File: `Sonixy-v1.4.8-code20-release.apk` (also `Sonixy-v1.4.8-code20-release.aab`)
