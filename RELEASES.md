@@ -1,5 +1,28 @@
 # Sonixy Releases
 
+## v1.4.10
+
+- File: `Sonixy-v1.4.10-code22-release.apk` (also `Sonixy-v1.4.10-code22-release.aab`)
+- Version name: `1.4.10`
+- Version code: `22`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `6084F32564B9DE14D959293876CFFC013439145234812AC1B34E88E10CEB1B8D`
+- AAB SHA-256: `8F13002A6771102794AF817652023C147637229E5B31CC2975738D0AC85AC42B`
+
+**Sonixy Connect 2.0.6** (Companion for Windows and Mac)
+- Windows: `Sonixy-Connect-Setup-2.0.6.exe`, auto-updater `latest.yml`
+  - SHA-256: `EC4996E34DB2EC4023367BEECB07A6C085B22ABA4F5C64CC26D9719EB06B480D`
+- Mac (universal: Intel & Apple silicon, macOS 12+): `Sonixy-Connect-2.0.6-mac.dmg`
+  - SHA-256: `1F3A69C242FDCFAB5495438DD977028347A2ACAD8414B7A67BFDD8A5EEAD4C96`
+
+### Release Notes
+
+- **Repeat one works on the PC**: the song starts over on the computer too instead of ending and staying paused.
+- **Every seek reaches the PC**: notification, lock screen, Bluetooth headphones and car seeks, not only the in-app slider.
+- **Sleep timer and Stop pause the PC** instead of leaving it playing.
+- **The PC can't fall behind**: the phone sends its position every few seconds and the PC catches up if it drifted more than 1.5 s or stopped. A pause on the PC itself is respected.
+- **A broken stream recovers (Connect)**: after a Wi-Fi hiccup the PC reloads the song where it was.
+
 ## v1.4.9
 
 - File: `Sonixy-v1.4.9-code21-release.apk` (also `Sonixy-v1.4.9-code21-release.aab`)
