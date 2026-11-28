@@ -39,9 +39,9 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 
 | Platform | Version | Size | Download |
 | :--- | :---: | :---: | :--- |
-| **Android** (7.0+) | **v1.4.10** | ~37.3 MB | [**Sonixy-v1.4.10-code22-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.10/Sonixy-v1.4.10-code22-release.apk) |
-| **Windows** (10 / 11): Sonixy Connect | **v2.0.6** | ~100.7 MB | [**Sonixy-Connect-Setup-2.0.6.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.10/Sonixy-Connect-Setup-2.0.6.exe) |
-| **macOS** (12+, Intel & Apple silicon): Sonixy Connect | **v2.0.6** | ~210.1 MB | [**Sonixy-Connect-2.0.6-mac.dmg**](https://github.com/nourddinak/sonixy/releases/download/v1.4.10/Sonixy-Connect-2.0.6-mac.dmg) |
+| **Android** (7.0+) | **v1.4.11** | ~37.3 MB | [**Sonixy-v1.4.11-code23-release.apk**](https://github.com/nourddinak/sonixy/releases/download/v1.4.11/Sonixy-v1.4.11-code23-release.apk) |
+| **Windows** (10 / 11): Sonixy Connect | **v2.0.6** | ~100.7 MB | [**Sonixy-Connect-Setup-2.0.6.exe**](https://github.com/nourddinak/sonixy/releases/download/v1.4.11/Sonixy-Connect-Setup-2.0.6.exe) |
+| **macOS** (12+, Intel & Apple silicon): Sonixy Connect | **v2.0.6** | ~210.1 MB | [**Sonixy-Connect-2.0.6-mac.dmg**](https://github.com/nourddinak/sonixy/releases/download/v1.4.11/Sonixy-Connect-2.0.6-mac.dmg) |
 
 > Only download Sonixy from this repository's [Releases page](https://github.com/nourddinak/sonixy/releases) or the [official website](https://nourddinak.github.io/sonixy/). Check the SHA-256 hashes [below](#-verify-your-download).
 
@@ -91,7 +91,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details open>
 <summary><b>Android</b></summary>
 
-1. Download [**`Sonixy-v1.4.10-code22-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.10/Sonixy-v1.4.10-code22-release.apk).
+1. Download [**`Sonixy-v1.4.11-code23-release.apk`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.11/Sonixy-v1.4.11-code23-release.apk).
 2. Open the file from your notifications or file manager.
 3. Allow **"Install unknown apps"** if Android asks.
 4. Open Sonixy, paste a link, and press download.
@@ -101,7 +101,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details>
 <summary><b>Windows</b></summary>
 
-1. Download [**`Sonixy-Connect-Setup-2.0.6.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.10/Sonixy-Connect-Setup-2.0.6.exe).
+1. Download [**`Sonixy-Connect-Setup-2.0.6.exe`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.11/Sonixy-Connect-Setup-2.0.6.exe).
 2. Run the installer. On first launch, allow the admin prompt once so your phone can reach the PC on any network.
 3. On your phone, open the player, tap the cast icon, pick your PC and click **Allow** on the PC.
 4. Updates install automatically from then on.
@@ -111,7 +111,7 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 <details>
 <summary><b>Mac</b></summary>
 
-1. Download [**`Sonixy-Connect-2.0.6-mac.dmg`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.10/Sonixy-Connect-2.0.6-mac.dmg) (one file for Intel and Apple silicon).
+1. Download [**`Sonixy-Connect-2.0.6-mac.dmg`**](https://github.com/nourddinak/sonixy/releases/download/v1.4.11/Sonixy-Connect-2.0.6-mac.dmg) (one file for Intel and Apple silicon).
 2. Open it and drag **Sonixy Connect** into Applications.
 3. The app isn't notarized by Apple, so macOS blocks the first launch: open **System Settings → Privacy & Security** and click **Open Anyway**. Then allow **Local Network** access.
 4. Pair from your phone like on Windows. The Mac version doesn't update itself; download new versions from the Releases page.
@@ -123,14 +123,14 @@ Paste a link from **Spotify, YouTube, SoundCloud, Deezer, Apple Music, TikTok** 
 ## 🔐 Verify your download
 
 ```powershell
-Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.10-code22-release.apk
+Get-FileHash -Algorithm SHA256 .\Sonixy-v1.4.11-code23-release.apk
 ```
 
 On a Mac: `shasum -a 256 Sonixy-Connect-2.0.6-mac.dmg`
 
 | File | SHA-256 |
 | :--- | :--- |
-| `Sonixy-v1.4.10-code22-release.apk` | `6084F32564B9DE14D959293876CFFC013439145234812AC1B34E88E10CEB1B8D` |
+| `Sonixy-v1.4.11-code23-release.apk` | `BDA7DE38D85E5437C080C1DB827ABB5D2AEDC4CAA7D164E76C8D31DB47A93295` |
 | `Sonixy-Connect-Setup-2.0.6.exe` | `EC4996E34DB2EC4023367BEECB07A6C085B22ABA4F5C64CC26D9719EB06B480D` |
 | `Sonixy-Connect-2.0.6-mac.dmg` | `1F3A69C242FDCFAB5495438DD977028347A2ACAD8414B7A67BFDD8A5EEAD4C96` |
 

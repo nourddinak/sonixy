@@ -1,5 +1,21 @@
 # Sonixy Releases
 
+## v1.4.11
+
+- File: `Sonixy-v1.4.11-code23-release.apk` (also `Sonixy-v1.4.11-code23-release.aab`)
+- Version name: `1.4.11`
+- Version code: `23`
+- Application ID: `com.nourddinak.sonixy`
+- SHA-256: `BDA7DE38D85E5437C080C1DB827ABB5D2AEDC4CAA7D164E76C8D31DB47A93295`
+- AAB SHA-256: `BAA4A79CAACFD17295363BAD3C3E64C317313B5E73D69198245DB3813E4BD88A`
+
+**Sonixy Connect 2.0.6** is unchanged and attached to this release too (see v1.4.10 for its checksums).
+
+### Release Notes
+
+- **Translate lyrics in one tap**: a Translate pill on the player's lyrics shows each line in your language under the original (14 languages). Translations are kept on the phone and open instantly, even offline.
+- **The right artist, not just the right title**: retries used to search the title alone ("ZHU – Faded" became Alan Walker's "Faded", Lionel Richie's "Hello" became Adele's). Every search now combines title and artist, other artists' songs are rejected, a retry keeps the match it already found, and remixes, live or slowed versions are avoided unless asked for.
+
 ## v1.4.10
 
 - File: `Sonixy-v1.4.10-code22-release.apk` (also `Sonixy-v1.4.10-code22-release.aab`)
